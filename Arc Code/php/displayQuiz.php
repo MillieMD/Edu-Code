@@ -1,5 +1,6 @@
 <?php
-$_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
+session_start();
+$_SESSION["lang"] = $_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
 $questions = array(); //Holds all question data for generating the page
 
 function initialiseQuestionsArray($lang){ 
@@ -71,47 +72,39 @@ function displayQuestion($questions){
         shuffle($answers); //prevents the correct answer always being the first, while still allowing it to be the first when creating the array so its easy to find
 
         //TODO: Add header + CSS to the page, link from here
-        echo("<html><body><p> Question $j. $currentQuestion </p> <form id = 'question + $j' data-value = '$topic'>");
+        echo("<html><body><p> Question $j. $currentQuestion </p> <form action = 'checkQuiz.php' method = 'post' id = 'quiz'>");
 
         foreach($answers as &$answer){
 
             if($answer == $correctAnswer){
-                echo("<input type = 'radio' name = 'answer + $j' value = 'correct'> <label> $answer </label> <br>");
+                echo("<input type = 'radio' name = 'answer $j' value = '$topic/correct'> <label> $answer </label> </input> <br>");
             }else{
-                echo("<input type = 'radio' name = 'answer + $j' value = 'wrong'> <label> $answer </label> <br>");
+                echo("<input type = 'radio' name = 'answer $j' value = '$topic/wrong'> <label> $answer </label> </input> <br>");
             }
             
         }
 
         $j++;
+
     }
-
+    
     echo("
-            <button type = 'button' onclick = 'checkAnswer($j);'> Check Answers </button> </form> 
-            <script src = >
-            function checkAnswer(numQuestions){
+        <br><input type = 'submit' name = 'submit' value = 'Check Answers'> </form> ");
+    //TODO: PHP script to check the answer is correct then suggest topics for improvement
 
-                document.getElementsById('question 1').style.color = 'red';
-            
-                /*var score = 0;
-            
-                for(var i = 1; i < 11; i++){
-                    var currentQuestion = document.getElementByName('answer' + i);
-            
-                    for(var j = 0; j < currentQuestion.legnth; j++){
-                        
-                    }
-                }*/
-            
-                return false;
-            </script>
-            ");
-    //TODO: Script to check the answer is correct then load the next question somehow
-
+    $_SESSION["numQuestions"] = $j;
+ 
 }
 
-$questions = initialiseQuestionsArray($_POST["lang"]);
-displayQuestion($questions);
+$questions = initialiseQuestionsArray($_SESSION["lang"]);
 
+if($questions == 0){
+    echo("uh oh");
     
+}else{
+    displayQuestion($questions);
+
+}
+   
+
 ?>
