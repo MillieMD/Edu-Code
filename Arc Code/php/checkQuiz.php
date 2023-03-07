@@ -17,10 +17,19 @@ for($i = 1; $i < $j; $i++){
     }
 }
 
-echo("<html><header></header><body><p> Your score is $score. You need to work on:</p>");
+$score = $score/($j-1) * 100;
 
-foreach($topics as &$topic){
-   echo("<ul> $topic </ul>");
+echo("<html><header></header><body><p> You scored $score%, "); 
+
+if ($score < 100){
+    echo("here are some topics for you to take a look at:</p>");
+
+    foreach($topics as &$topic){
+       echo("<ul> <a href = '#' > $topic </ul>");
+    }
+
+}else{
+    echo ("well done! </p>");
 }
 
 session_destroy();
