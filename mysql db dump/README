@@ -1,0 +1,8 @@
+The mySQL dump can be imported to mySQL to host the database on your localhost
+
+To use:
+1. Install mySQL
+2. Set the root password to be password
+3. Import the dump
+4. Install wamp, xampp or Apache and put the Arc-Code folder in the projects folder
+5. Run from localhost\[name]
