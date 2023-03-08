@@ -3,7 +3,6 @@ session_start();
 $_SESSION["topic"] = $_GET["topic"];
 $_SESSION["lang"] = $_GET["lang"];
 
-
 function initialisePage(){
 
     $db = new mysqli("localhost","root","password","educode"); 
@@ -34,6 +33,8 @@ function initialisePage(){
     $activity = array();
     while ($row = $result->fetch_assoc()){
 
+        //$activity[] = $row["before"];
+        //$activity[] = $row["after"];
         $activity[] = $row["task"];
         $activity[] = $row["desiredOutput"];
         $activity[] = $row["filledText"];
@@ -46,7 +47,41 @@ function initialisePage(){
 }
 
 function displayPage($activity){
+
+    $topic = $_SESSION['topic'];
     
+    if($_SESSION["lang"] == "J"){
+        $lang = "Java";
+    }else{
+        $lang = "Python";
+    }
+
+    $header = fopen("pagedata/header.txt","r") or die("Header element unreadable - Please try again later");
+    echo(fread($header,filesize("pagedata/header.txt")));
+    fclose($header);
+
+    echo("<h1 class='w3-margin w3-jumbo w3-text-black';><b> $lang $topic </b></h1>");
+     
+    echo("
+    </header>
+    <svg style='background-color: rgb(255, 255, 255) color w3-blue ;' width='110%' height='200' viewBox='10 10 100 100' preserveAspectRatio='none'>
+        <path id='wavepath' d='M0,0 L110,0C35,150 35,0 0,100z' fill='#2894f4'></path>
+    </svg>");
+
+    $tutorial = fopen("pagedata/$lang $topic.txt","r") or die("Tutorial element unreadable - Please try again later");
+    echo(fread($tutorial,filesize("pagedata/$lang $topic.txt")));
+    fclose($tutorial);
+
+    displayActivity($activity);
+
+    $footer = fopen("pagedata/footer.txt","r");
+    echo(fread($footer,filesize("pagedata/footer.txt")));
+    fclose($footer);
+
+}
+
+function displayActivity($activity){
+
     $instruction = $activity[0];
     $correctOutput = $activity[1];
     $correctString = $activity[2];
@@ -58,14 +93,13 @@ function displayPage($activity){
 
     echo("
         <p>Try it yourself! <br> $instruction
-        <form id = 'FITG' data-value = '$correctString'>
+        <form id = 'FITG' data-value = '$correctOutput'>
     "); 
-    //TODO: new row in activity table for correct output
 
     $j = 0;
     foreach($activity as &$i){
         if ($i == ' '){
-            echo("<input type = 'textarea' name = box $j>");
+            echo("<input type = 'textarea' name = 'box $j'>");
         } else{
             echo("$i");
         }
