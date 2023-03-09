@@ -92,8 +92,8 @@ function displayActivity($activity){
     $activity = $activity[3];
 
     echo("
-        <p>Try it yourself! <br> $instruction
-        <form id = 'FITG' data-value = '$correctOutput'>
+        <p>Try it yourself! <br> $instruction </p>
+        <form id = 'FITG' data-value = ''>
     "); 
 
     $j = 0;
