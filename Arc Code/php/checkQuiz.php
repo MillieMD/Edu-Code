@@ -32,5 +32,4 @@ if ($score < 100){
     echo ("well done! </p>");
 }
 
-session_destroy();
 ?>
