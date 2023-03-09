@@ -58,6 +58,18 @@ function displayQuestion($questions){
     //$i is the index of the question to be displayed in the $questions array,
     //$j is the question number
 
+    $header = fopen("pagedata/header.txt","r") or die("Header element unreadable - Please try again later");
+    echo(fread($header,filesize("pagedata/header.txt")));
+    fclose($header);
+
+    if($_POST["lang"] == "J"){
+        $lang = "Java";
+    }else{
+        $lang = "Python";
+    }
+
+    echo("<h1 class='w3-margin w3-jumbo w3-text-black';><b> $lang Quiz </b></h1> </header>");
+
     $j = 1;
     foreach($questions as &$question){
 
