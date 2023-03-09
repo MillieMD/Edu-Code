@@ -11,7 +11,7 @@ function initialiseQuestionsArray($lang){
     //TODO: host database
 
     if($db->connect_error){
-        echo("<html><body><h1> Error: Cannot connect to the database at this time </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
+        die("<html><body><h1> Error: ".mysqli_connect_error()." </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
 
         return 0; 
 

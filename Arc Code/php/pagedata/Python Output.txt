@@ -1,0 +1,20 @@
+<p>A print function in python is used to communicate to the user.</p>
+
+<p>A print function is used as follows:</p>
+
+<img src='..\images\PythonPrint.png' style='width:237px;height:37px;'>
+
+<p>This would output in the console:</p>
+
+<img src='..\images\PrintConsole.png' style='width:267px;height:107px;'>
+
+<p>Tips:</p>
+
+<ul>
+
+    <li>Ensure the 'print' keyword is lower case.</li>
+    <li>Make sure the text you wish to display is surrounded by quotes which are surrounded by brackets.</li>
+    <li>When writing inside the quotes write in plain english.</li>
+    <li>For this exercise instead of quotation marks use '' to encase your words (e.g. 'Hello World!')</li>
+
+</ul>
