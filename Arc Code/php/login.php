@@ -29,9 +29,9 @@ $row = $result->fetch_assoc();
 if (!password_verify($_POST["password"],$row["userPassword"])){
     die("login failed");
 }else{
-    $_SESSION["id"] == $row["userid"];
+    $_SESSION["id"] = $row["userid"];
     //REDIRECT TO HOME PAGE
-    header("location: ../educode1.php");
+    header("location: ../index.php");
 }
 
 ?>
