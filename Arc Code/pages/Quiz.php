@@ -70,12 +70,12 @@
         <div class="w3-container w3-blue w3-center w3-padding-64">
           <footer class="w3-container w3-center w3-padding-100 w3-blue">
             <div class="w3-container w3-padding-100">
-              <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="quiz.html" style="font-size:17px;margin-top:-9px;margin-top:-9px" title="Quizzes">QUIZZES</a>
+              <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="quiz.php" style="font-size:17px;margin-top:-9px;margin-top:-9px" title="Quizzes">QUIZZES</a>
               <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="/exercises/index.php" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Exercises">EXERCISES</a>
               <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="/exercises/index.php" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Tutorials">TUTORIALS</a>
               <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="/exercises/index.php" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Mini Games">MINI-GAMES</a>
               <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="/exercises/index.php" style="font-size:17px;margin-top:-9px;margin-left:12px" title="Contact Us">CONTACT US</a>
-              <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="Educode1.html#about us" style="font-size:17px;margin-top:-9px;margin-left:12px" title="About Us">ABOUT US</a>
+              <a class="w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left" href="..\index.php#about us" style="font-size:17px;margin-top:-9px;margin-left:12px" title="About Us">ABOUT US</a>
                </div><br><br><br><br>
                <p class="w3-medium w3-text-white">
                The comprehensive and cutting-edge website Arc Code was created to offer those wishing to improve their skills and knowledge with high-quality education, training, and mini-games.<br>Arc Code provides a comprehensive selection of tutorials and courses in Java and Python.<br>Students can learn whenever and wherever they want because of the website’s accessibility and ease of use.<br>It is designed to make it a more friendly experience by having mini-games built into the website.</p></footer>
