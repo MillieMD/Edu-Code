@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION["topic"] = $_GET["topic"];
-$_SESSION["lang"] = $_GET["lang"];
+$_GET["topic"];
+$_GET["lang"];
 
 function initialisePage(){
 
@@ -15,7 +15,7 @@ function initialisePage(){
     }
 
     $sql = $db->prepare("SELECT unfilledText, filledText, task, desiredOutput FROM fitgactivities WHERE lang = ? AND topic = ? LIMIT 1;"); //Pull out activity information
-    $sql->bind_param("ss", $_SESSION["lang"], $_SESSION["topic"]);
+    $sql->bind_param("ss", $_GET["lang"], $_GET["topic"]);
     $sql->execute();
     $result = $sql->get_result();
 
@@ -48,9 +48,9 @@ function initialisePage(){
 
 function displayPage($activity){
 
-    $topic = $_SESSION['topic'];
+    $topic = $_GET['topic'];
     
-    if($_SESSION["lang"] == "J"){
+    if($_GET["lang"] == "J"){
         $lang = "Java";
     }else{
         $lang = "Python";

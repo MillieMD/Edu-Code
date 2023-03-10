@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION["lang"] = $_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
+$_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
 $questions = array(); //Holds all question data for generating the page
 
 function initialiseQuestionsArray($lang){ 
@@ -23,13 +23,13 @@ function initialiseQuestionsArray($lang){
     $result = $sql->get_result();
 
     if ($result === FALSE){
-        echo("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
+        die("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
         return 0;
 
     }
 
     if ($result -> num_rows <= 0){
-        echo("<html><body><h1> Error: No questions found for that language </h1> <p>Arc Code are sorry for the inconvinience, please try again later </p></body></html>");
+        die("<html><body><h1> Error: No questions found for that language </h1> <p>Arc Code are sorry for the inconvinience, please try again later </p></body></html>");
         return 0;
     }
 
@@ -108,7 +108,7 @@ function displayQuestion($questions){
  
 }
 
-$questions = initialiseQuestionsArray($_SESSION["lang"]);
+$questions = initialiseQuestionsArray($_POST["lang"]);
 
 if($questions == 0){
     echo("uh oh");

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //server side validation, hopefully never seen by the user
 if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
@@ -19,7 +20,7 @@ if($_POST["confirm_password"] !== $_POST["password"]){
 
 $passHash = password_hash($_POST["password"],PASSWORD_DEFAULT);
 
-if($_POST['teacher'] == 'yes'){
+if(isset($_POST['teacher']) && $_POST['teacher'] == 'yes'){
     $teacher = 1;
 }else{
     $teacher = 0;
@@ -42,6 +43,24 @@ $sql = $db->prepare("INSERT INTO users (username, email, userPassword, isTeacher
 $sql->bind_param("sssi",$_POST["username"], $_POST["email"], $passHash, $teacher);
 $sql->execute();
 
+$sql = $db->prepare("SELECT userID FROM users WHERE email = ?;");
+$sql->bind_param("s", $_POST["email"]);
+$sql->execute();
+$result = $sql->get_result();
+
+if ($result === FALSE){
+    die("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
+    return 0;
+
+}
+
+$row = $result->fetch_assoc();
+
+$_SESSION["id"] = $row["userID"];
+print_r($_SESSION["id"]);
+
+header("location: ..\educode1.php");
+exit;
 
 
 
