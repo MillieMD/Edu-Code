@@ -59,7 +59,7 @@ $row = $result->fetch_assoc();
 $_SESSION["id"] = $row["userID"];
 print_r($_SESSION["id"]);
 
-header("location: ..\educode1.php");
+header("location: ../educode1.php"); //NOTE: redirecting this way isn't working, because of the apache modules, but its hard to tell which ones missing
 exit;
 
 

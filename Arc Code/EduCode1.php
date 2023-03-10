@@ -28,7 +28,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 <a href='EduCode1.php' class='w3-bar-item w3-button w3-text-black'><i class=''></i><b>Home</b></a>
 <a href='Java.html' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Java</b></a>
 <a href='Python.html' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Python</b></a>
-<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='signin.html' title='Exercises'>Sign In</a>
+<?php session_start(); if($_SESSION['id']>0){
+    echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='profile.php' title='Exercises'>View Your Profile</a>");
+    }
+    else{
+      echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='signin.html' title='Exercises'>Sign In</a>");
+    } ?>
 </div>
 
   <!-- Navbar on small screens -->
