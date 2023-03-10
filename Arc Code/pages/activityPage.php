@@ -29,10 +29,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 <a href='Java.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Java</b></a>
 <a href='Python.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Python</b></a>
 <?php session_start(); if($_SESSION['id']>0){
-    echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='/profile.php' title='Exercises'>View Your Profile</a>");
+    echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='profile.php' title='Exercises'>View Your Profile</a>");
     }
     else{
-      echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='/signin.html' title='Exercises'>Sign In</a>");
+      echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='signin.html' title='Exercises'>Sign In</a>");
     } ?>
 </div>
 
@@ -43,16 +43,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
     <a href='Python.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Python</b></a>
 
     <?php session_start(); if($_SESSION['id']>0){
-    echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='/profile.php' title='Exercises'>View Your Profile</a>");
+    echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='profile.php' title='Exercises'>View Your Profile</a>");
     }
     else{
-      echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='/signin.html' title='Exercises'>Sign In</a>");
+      echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='signin.html' title='Exercises'>Sign In</a>");
     } ?>
     <!--CHANGES BUTTON FROM SIGN IN TO PROFILE BUTTON-->
   </div>
 </div>
 
-<!-- Header -->
 
 <?php
 function initialisePage(){
@@ -162,7 +161,7 @@ displayActivity($activity);
 <div class='w3-container w3-blue w3-center w3-padding-64'>
   <footer class='w3-container w3-center w3-padding-100 w3-blue'>
     <div class='w3-container w3-padding-100'>
-      <a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left' href='/quiz.php' style='font-size:17px;margin-top:-9px;margin-top:-9px' title='Quizzes'>QUIZZES</a>
+      <a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left' href='quiz.php' style='font-size:17px;margin-top:-9px;margin-top:-9px' title='Quizzes'>QUIZZES</a>
       <a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left' href='/exercises/index.php' style='font-size:17px;margin-top:-9px;margin-left:12px' title='Exercises'>EXERCISES</a>
       <a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left' href='/exercises/index.php' style='font-size:17px;margin-top:-9px;margin-left:12px' title='Tutorials'>TUTORIALS</a>
       <a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-left' href='/exercises/index.php' style='font-size:17px;margin-top:-9px;margin-left:12px' title='Mini Games'>MINI-GAMES</a>
