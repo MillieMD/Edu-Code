@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $_GET["topic"];
 $_GET["lang"];
 
@@ -93,7 +94,7 @@ function displayActivity($activity){
 
     echo("
         <p>Try it yourself! <br> $instruction </p>
-        <form id = 'FITG' data-value = ''>
+        <form id = 'FITG' data-value = '$correctString'>
     "); 
 
     $j = 0;
@@ -112,6 +113,7 @@ function displayActivity($activity){
     </form>
     <script src ='..\js\SCRIPTNAME.js'> </script>
     ");
+
     //TODO kyle needs to write javascript that can check the answers
     //NOTE: correct answer is stored inside the form object under data-value, which has id "FITG"
     //NOTE: page cannot refresh because it will lose a bunch of data and cause errors

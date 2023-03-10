@@ -20,7 +20,7 @@ if ($result === FALSE){
 
 }
 
-if (!$result){
+if ($result == null){
     die("no user found");
 }
 
