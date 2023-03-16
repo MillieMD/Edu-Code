@@ -134,10 +134,11 @@ function displayActivity($activity){
     foreach($activity as &$i){
         if ($i == ' '){
             echo("<input type = 'textarea' name = 'box $j'>");
-            $j++;
         } else{
             echo("$i");
         }
+
+        $j++;
     }
 
     echo("
