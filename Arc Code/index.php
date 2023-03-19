@@ -28,7 +28,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 <a href='index.php' class='w3-bar-item w3-button w3-text-black'><i class=''></i><b>Home</b></a>
 <a href='pages/Java.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Java</b></a>
 <a href='pages/Python.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Python</b></a>
-<?php session_start(); if($_SESSION['id']>0){
+<?php session_start(); if($_SESSION['id'] == null){$_SESSION['id'] = 0;} if($_SESSION['id']>0){
     echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='pages/profile.php' title='Exercises'>View Your Profile</a>");
     }
     else{
@@ -42,7 +42,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
     <a href='pages/Java.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Java</b></a>
     <a href='pages/Python.php' class='w3-bar-item w3-button w3-hide-small w3-text-black'><i class=''></i><b>Python</b></a>
 
-    <?php session_start(); if($_SESSION['id']>0){
+    <?php session_start(); if($_SESSION['id'] == null){$_SESSION['id'] = 0;} if($_SESSION['id']>0){
     echo("<a class='w3-button w3-black w3-hide-small w3-round w3-hide-medium w3-right' href='pages/profile.php' title='Exercises'>View Your Profile</a>");
     }
     else{
