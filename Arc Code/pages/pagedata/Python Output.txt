@@ -15,6 +15,6 @@
     <li>Ensure the 'print' keyword is lower case.</li>
     <li>Make sure the text you wish to display is surrounded by quotes which are surrounded by brackets.</li>
     <li>When writing inside the quotes write in plain english.</li>
-    <li>For this exercise instead of quotation marks use '' to encase your words (e.g. 'Hello World!')</li>
+    <li>For this exercise instead of quotation marks use single quotes (' ') to encase your words (e.g. 'Hello World!')</li>
 
 </ul>
