@@ -2,5 +2,5 @@ SELECT * FROM fitgactivities;
 
 --@block
 UPDATE fitgactivities
-SET filledText = "print"
-WHERE activityID = 0;
+SET unfilledText = "? ?(<div class = 'string'>'Hello World!'</div>)"
+WHERE activityID = 1;

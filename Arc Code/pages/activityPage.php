@@ -4,6 +4,7 @@
 <title>Arc Code</title>
 <meta charset='UTF-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' href='../css/home.css'>
 <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
@@ -17,10 +18,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 </style>
 </head>
 <body>
-    <head>
-                <title>CSS Basics</title>
-                <link rel='stylesheet' href='css/home.css'>
-            </head>
 <!-- Navbar -->
 <div class='w3-top'>
     <div class='w3-bar w3-blue w3-card w3-left-align w3-large w3-solid'>
@@ -59,7 +56,7 @@ function initialisePage(){
     $db = new mysqli("localhost","root","password","educode"); 
 
     if($db->connect_error){
-        echo("<html><body><h1> Error: Cannot connect to the database at this time </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
+        die("<html><body><h1> Error: Cannot connect to the database at this time </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
 
         return 0; 
 
@@ -71,13 +68,13 @@ function initialisePage(){
     $result = $sql->get_result();
 
     if ($result === FALSE){
-        echo("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
+        die("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
         return 0;
 
     }
 
     if ($result -> num_rows <= 0){
-        echo("<html><body><h1> Error: No activities found for that language or topic </h1> <p>Arc Code are sorry for the inconvinience, please try again later </p></body></html>");
+        die("<html><body><h1> Error: No activities found for that language or topic </h1> <p>Arc Code are sorry for the inconvinience, please try again later </p></body></html>");
         return 0;
     }
 
@@ -127,6 +124,7 @@ function displayActivity($activity){
 
     echo("
         <p>Try it yourself! <br> $instruction </p>
+        <div class = 'code-snippet'>
         <form id = 'FITG' data-value = '$correctString'>
     "); 
 
@@ -140,9 +138,10 @@ function displayActivity($activity){
         }
     }
 
-    echo("
-    <br> <button type = 'sumbit' > Check Answer </button> <button type = 'button'> Reveal Answer </button>
+    echo(" </div>
+    <br> <button type = 'button' > Check Answer </button> <button type = 'button'> Reveal Answer </button>
     </form>
+    
 
     ");
 

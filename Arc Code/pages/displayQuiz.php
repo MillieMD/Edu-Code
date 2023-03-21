@@ -53,6 +53,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 </div>
 
 <?php
+
 $_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
 $questions = array(); //Holds all question data for generating the page
 
