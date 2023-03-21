@@ -53,8 +53,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif}
 </div>
 
 <?php
-
-$_POST["lang"]; //Either J or P depending on language, will be used to filter SQL
+//Either J or P depending on language, will be used to filter SQL
 $questions = array(); //Holds all question data for generating the page
 
 function initialiseQuestionsArray($lang){ 
@@ -112,7 +111,9 @@ function displayQuestion($questions){
     //$i is the index of the question to be displayed in the $questions array,
     //$j is the question number
 
-    if($_POST["lang"] == "J"){
+    $langShort  = $_GET['lang'];
+
+    if($_GET["lang"] == "J"){
         $lang = "Java";
     }else{
         $lang = "Python";
@@ -139,7 +140,7 @@ function displayQuestion($questions){
         shuffle($answers); //prevents the correct answer always being the first, while still allowing it to be the first when creating the array so its easy to find
 
         //TODO: Add header + CSS to the page, link from here
-        echo("<html><body><p> Question $j. $currentQuestion </p> <form action = '../php/checkQuiz.php' method = 'post' id = 'quiz'>");
+        echo("<html><body><p> Question $j. $currentQuestion </p> <form action = '../php/checkQuiz.php?lang=$langShort' method = 'post' id = 'quiz'>");
 
         foreach($answers as &$answer){
 
@@ -157,13 +158,12 @@ function displayQuestion($questions){
     
     echo("
         <br><input type = 'submit' name = 'submit' value = 'Check Answers'> </form> ");
-    //TODO: PHP script to check the answer is correct then suggest topics for improvement
 
     $_SESSION["numQuestions"] = $j;
  
 }
 
-$questions = initialiseQuestionsArray($_POST["lang"]);
+$questions = initialiseQuestionsArray($_GET["lang"]);
 
 if($questions == 0){
     echo("uh oh");

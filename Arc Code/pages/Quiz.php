@@ -58,13 +58,8 @@
         <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#2894f4"></path>
         </svg>
 
-        <form action = "displayQuiz.php" method = "post">
-            <label><input type = "radio" value = "J" name = "lang" checked = "checked"> Java </label>
-            <label><input type = "radio" value = "P" name = "lang"> Python </label>
-
-            <input type = "submit" name = "submit" value = "Start Quiz">
-
-        </form>
+        <button> <a href = "displayquiz.php?lang=J"> Java Quiz </a> </button> 
+        <button> <a href = "displayquiz.php?lang=P"> Python Quiz </a> </button>
 
         
         <div class="w3-container w3-blue w3-center w3-padding-64">
