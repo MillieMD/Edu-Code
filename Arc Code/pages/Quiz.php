@@ -58,8 +58,11 @@
         <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#2894f4"></path>
         </svg>
 
-        <button> <a href = "displayquiz.php?lang=J"> Java Quiz </a> </button> 
-        <button> <a href = "displayquiz.php?lang=P"> Python Quiz </a> </button>
+
+        <button><a href='displayquiz.php?lang=J'  title='Java Quiz'>Java Quiz</a></button>
+        <button><a  href='displayquiz.php?lang=P' title='Python Quiz'>Python Quiz</a></button>
+
+        <br>
 
         
         <div class="w3-container w3-blue w3-center w3-padding-64">

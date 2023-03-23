@@ -141,7 +141,6 @@ function displayActivity($activity){
     echo(" </div>
     <br> <button type = 'button' > Check Answer </button> <button type = 'button'> Reveal Answer </button>
     </form>
-    
 
     ");
 
