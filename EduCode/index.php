@@ -42,10 +42,8 @@
                 <button class = button-blue> Login </button>
                 <button class = button-dark> Register </button>
                 ");
-
             }
             ?>
-
         </div>
     </div>
     
@@ -62,7 +60,6 @@
         
             <div> 
                 <h1> Why edu:Code? </h1>
-
                 Practical application of programming skills is the most effective way to learn to code, 
                 which is why Arc Code provides opportunities to put lessons to use in fill-in-the-blank activies. 
                 You are provided clear error messages, to teach you to debug and correct your own code. 
@@ -84,11 +81,6 @@
 
     </div>
 
-
-    <!-- Black section -->
-        <!-- Image -->
-
-
     <div class = "footer">
 
         <button class = "button-light"> Take a Quiz </button>
@@ -101,7 +93,5 @@
 
     </div>
 
-
 </body>   
-
 </html>

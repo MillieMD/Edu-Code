@@ -22,6 +22,7 @@
     padding: 0.4vw 0.8vw;
 
     font-size: inherit;
+    font-family: inherit;
 }
 
 .button-blue:hover{
@@ -42,7 +43,7 @@
     padding: 0.4vw 0.8vw;
 
     font-size: inherit;
-
+    font-family: inherit;
 }
 
 .button-light:hover{
@@ -63,6 +64,7 @@
     padding: 0.4vw 0.8vw;
 
     font-size: inherit;
+    font-family: inherit;
 
 }
 
@@ -133,7 +135,7 @@ body{
 
 .title-section .title{
 
-    padding: 10vw;
+    padding: 11vw;
     font-size: 3em;
 }
 
