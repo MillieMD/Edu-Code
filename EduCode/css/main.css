@@ -1,0 +1,178 @@
+/* Millie MD Nov 2023 */
+
+:root{
+
+    --blue: #0099ff;
+    --off_white: #f1f1f1;
+    --black: #000000;
+}
+
+/* Typography */
+
+/* Buttons */
+
+.button-blue{
+
+    background-color: var(--blue);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 0.4vw 0.8vw;
+
+    font-size: inherit;
+}
+
+.button-blue:hover{
+
+    background-color: var(--off_white);
+    color: var(--blue)
+
+}
+
+.button-light{
+
+    background-color: var(--off_white);
+    color: var(--black);
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 0.4vw 0.8vw;
+
+    font-size: inherit;
+
+}
+
+.button-light:hover{
+
+    background-color: var(--black);
+    color: var(--off_white);
+
+}
+
+.button-dark{
+
+    background-color: var(--black);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 0.4vw 0.8vw;
+
+    font-size: inherit;
+
+}
+
+.button-dark:hover{
+
+    background-color: var(--off_white);
+    color: var(--black);
+
+}
+
+/* Sections */
+
+body{
+
+    margin: 0;
+
+    background-color: var(--off_white);
+
+    font-family: monospace;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    position: sticky;
+    top:0;
+    width: 100%;
+
+    background-color: var(--blue);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.header .header-left button, .header .header-right button{
+
+    appearance: button-dark;
+    font-size: 1.5rem;
+
+    padding: 0.8vw;
+
+}
+
+.title-section{
+
+    width: 100%;
+    
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer{
+
+    bottom: 0;
+
+    padding: 2vw;
+
+    text-align: center;
+
+    background-color: var(--blue);
+    color: var(--off_white);
+
+    width: 100% - 4vw;
+
+}
+
+
+/* Home Page */
+
+.title-section .title{
+
+    padding: 10vw;
+    font-size: 3em;
+}
+
+
+.info-section{
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.info-section div{
+
+    max-width: 80ch;
+    margin: 5vw;
+
+    font-size: 1.25em;
+
+}
+
+.info-section img{
+
+    height: 15vw;
+    width: auto;
+}
+
+.image-span{
+
+    height: 20vw;
+    text-align: center;
+
+}
+
+.image-span img{
+
+    height: 100%;
+    width: auto;
+}
+
