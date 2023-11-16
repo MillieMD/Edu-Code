@@ -62,6 +62,4 @@ print_r($_SESSION["id"]);
 header("location: ../index.php"); //NOTE: redirecting this way isn't working, because of the apache modules, but its hard to tell which ones missing
 exit;
 
-
-
 ?>

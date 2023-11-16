@@ -1,13 +1,7 @@
 <?php
 session_start();
 
-$db = new mysqli("localhost","root","password","educode"); 
-
-if($db->connect_error){
-    die("<html><body><h1> Error: ".mysqli_connect_error()." </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
-
-    return 0; 
-}
+$db = $connect_db("u2259541");
 
 $sql = $db->prepare("SELECT userid, userPassword FROM users WHERE email = ?;");
 $sql->bind_param("s", $_POST["email"]);
@@ -17,7 +11,6 @@ $result = $sql->get_result();
 if ($result === FALSE){
     die("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
     return 0;
-
 }
 
 if ($result == null){

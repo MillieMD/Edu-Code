@@ -12,9 +12,17 @@
 
         <div class = 'header-left'>
 
-            <button class = "button-blue"> Home </button>
-            <button class = "button-blue"> Java </button>
-            <button class = "button-blue"> Python </button>
+            <a href = "index.php">
+            <button class = "button-blue">Home</button>
+            </a>
+
+            <a href = "#">
+            <button class = "button-blue">Java</button>
+            </a>
+
+            <a href = "#">
+            <button class = "button-blue">Python</button>
+            </a>
 
         </div>  
 
@@ -33,14 +41,21 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <button class = button-dark> Profile </button>
+                <a href = '#'>
+                <button class = 'button-dark'>Profile</button>
+                </a>
                 ");
 
             } else{
 
                 echo(" 
-                <button class = button-blue> Login </button>
-                <button class = button-dark> Register </button>
+                <a href = 'pages/login.html'>
+                <button class = 'button-blue'>Log in</button>
+                </a>
+                <a href = 'pages/register.html'>
+                <button class = 'button-dark'>Register</button>
+                </a>
+
                 ");
             }
             ?>

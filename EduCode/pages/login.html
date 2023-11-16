@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Log in - edu:Code</title>
+
+    <link rel = 'stylesheet' href = "../css/main.css">
+    <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
+</head>
+
+<body>
+
+    <div class = 'header'>
+
+        <div class = 'header-left'>
+
+            <a href = "../index.php">
+            <button class = "button-blue">Home</button>
+            </a>
+
+             <a href = "#">
+            <button class = "button-blue">Java</button>
+            </a>
+
+            <a href = "#">
+            <button class = "button-blue">Python</button>
+            </a>
+
+        </div>  
+
+    </div>
+
+    <form action = "../php/login.php" method = "POST">
+
+        <h1> Log in </h1>
+
+        <label for = "email"> Email: </label>
+        <input type = "email" name = "email" required>
+
+        <label for = "password"> Password: </label>
+        <input type = "password" name = "password" required>
+
+        <input class = "button-dark" type = "submit" value = "Log in">
+
+        <span> Don't have an account? <a href = "register.html"> Register now </a> </span>
+
+    </form>
+
+
+    <div class = "footer">
+
+        <button class = "button-light"> Take a Quiz </button>
+        <button class = "button-light"> Project Tutorials </button>
+        <button class = "button-light"> Contact Us </button>
+        <button class = "button-light"> About Us </button>
+
+        <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
+           <br> Get started today! </p>
+
+    </div>
+
+</body>
+</html>
