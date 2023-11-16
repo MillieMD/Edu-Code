@@ -3,7 +3,7 @@
 
 <head>
     <link rel = 'stylesheet' href = "css/main.css">
-    <link rel= 'icon' href='images\logodark.png' type='image/x-icon'>
+    <link rel= 'icon' href='images/logodark.png' type='image/x-icon'>
 </head>
 
 <body>
@@ -12,17 +12,11 @@
 
         <div class = 'header-left'>
 
-            <a href = "index.php">
-            <button class = "button-blue">Home</button>
-            </a>
+            <a href = "index.php"><button class = "button-blue">Home</button></a>
 
-            <a href = "#">
-            <button class = "button-blue">Java</button>
-            </a>
+            <a href = "#"><button class = "button-blue">Java</button></a>
 
-            <a href = "#">
-            <button class = "button-blue">Python</button>
-            </a>
+            <a href = "pages/python.php"><button class = "button-blue">Python</button></a>
 
         </div>  
 
@@ -63,7 +57,7 @@
     </div>
     
     <div class = 'title-section' style = 'background-color: #0099ff;'>
-        <div class = 'title'> {edu:Code} </div>
+        <div class = 'title'>{edu:Code}</div>
         <button class = "button-dark"> Start Learning </button>
     </div>
 
@@ -98,7 +92,7 @@
 
     <div class = "footer">
 
-        <button class = "button-light"> Take a Quiz </button>
+        <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
         <button class = "button-light"> Project Tutorials </button>
         <button class = "button-light"> Contact Us </button>
         <button class = "button-light"> About Us </button>

@@ -4,7 +4,6 @@
 <head>
     <link rel = 'stylesheet' href = "../css/main.css">
     <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
-    <title> Learn Python with edu:Code </title>
 </head>
 
 <body>
@@ -56,32 +55,31 @@
             ?>
         </div>
     </div>
-    
-    <div class = 'title-section' style = 'background-color: #0099ff;'>
-        <div class = 'title'>Python</div>
-    </div>
 
-    <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
-    </svg>
+    <!-- Title : Quiz -->
+    <!-- Java button Python toggle -->
 
-    <div class = "info-section"> 
+    <form action = "quiz.php" method = "POST"> 
 
-        <img src = "../images/python.png">
-        
-        <div>
+        <h3> Which language are you learning? </h3>
 
-            Python is quickly becoming one of the most important programming languages. 
-            It is easy to learn and very powerful once mastered. To begin learning Python all you need is a compatible version of Python installed.
-            The lastest version can be installed <a href = "https://www.python.org/downloads/">here</a>
+        <button class = "radio-selector">
+            <label for = "language">Java</label>
+            <input type = "radio" name = "language" value = "J">
+        </button>
 
-        </div>
-    
-    </div>
+        <button class = "radio-selector">
+            <label for = "language">Python</label>
+            <input type = "radio" name = "language" value = "P">
+        </button>
+
+        <input type = "submit" class = "button-dark" value = "Take Quiz">
+
+    </form>
 
     <div class = "footer">
 
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+        <button class = "button-light"> Take a Quiz </button>
         <button class = "button-light"> Project Tutorials </button>
         <button class = "button-light"> Contact Us </button>
         <button class = "button-light"> About Us </button>
@@ -90,6 +88,13 @@
            <br> Get started today! </p>
 
     </div>
+
+    <script> 
+    // radio button css switching
+
+    
+
+    </script>
 
 </body>   
 </html>
