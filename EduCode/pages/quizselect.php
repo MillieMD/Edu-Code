@@ -79,10 +79,10 @@
 
     <div class = "footer">
 
-        <button class = "button-light"> Take a Quiz </button>
-        <button class = "button-light"> Project Tutorials </button>
-        <button class = "button-light"> Contact Us </button>
-        <button class = "button-light"> About Us </button>
+    <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+        <a href = "about.php"><button class = "button-light"> About Us </button></a>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
            <br> Get started today! </p>

@@ -4,6 +4,8 @@
 <head>
     <link rel = 'stylesheet' href = "css/main.css">
     <link rel= 'icon' href='images/logodark.png' type='image/x-icon'>
+
+    <title>edu:Code - Learn to program in Python and Java</title>
 </head>
 
 <body>
@@ -14,14 +16,13 @@
 
             <a href = "index.php"><button class = "button-blue">Home</button></a>
 
-            <a href = "#"><button class = "button-blue">Java</button></a>
+            <a href = "pages/java.php"><button class = "button-blue">Java</button></a>
 
             <a href = "pages/python.php"><button class = "button-blue">Python</button></a>
 
         </div>  
 
         <div class = 'header-right'>
-
 
         <!-- If user logged in, link to profile, else give options to sign in or sign up -->
 
@@ -93,9 +94,9 @@
     <div class = "footer">
 
         <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <button class = "button-light"> Project Tutorials </button>
-        <button class = "button-light"> Contact Us </button>
-        <button class = "button-light"> About Us </button>
+        <a href = "pages/projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+        <a href = "pages/contact.php"><button class = "button-light"> Contact Us </button></a>
+        <a href = "pages/about.php"><button class = "button-light"> About Us </button></a>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
            <br> Get started today! </p>

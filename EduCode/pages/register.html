@@ -25,20 +25,20 @@
 
     </div>
 
-    <form action = "../php/register.php" method = "POST">
+    <form action = "../php/register.php" method = "POST" id = "register" enctype = "UTF-8">
 
         <h1> Create Account </h1>
 
-        <label for = "email"> Email: </label>
+        <label for = "email" id = "email-label"> Email </label>
         <input type = "email" name = "email" required>
 
-        <label for = "username"> Username: </label>
+        <label for = "username" id = "username-label"> Username </label>
         <input type = "text" name = "username" required>
 
-        <label for = "password"> Password: </label>
+        <label for = "password" id = "password-label"> Password </label>
         <input type = "password" name = "password" required>
 
-        <input class = "button-dark" type = "submit" value = "Register">
+        <input type = "submit" class = "button-dark" value = "Register">
 
         <span> Already have an account? <a href = "login.html"> Log In </a> </span>
 
@@ -47,10 +47,10 @@
 
     <div class = "footer">
 
-        <button class = "button-light"> Take a Quiz </button>
-        <button class = "button-light"> Project Tutorials </button>
-        <button class = "button-light"> Contact Us </button>
-        <button class = "button-light"> About Us </button>
+        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+        <a href = "about.php"><button class = "button-light"> About Us </button></a>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
            <br> Get started today! </p>
