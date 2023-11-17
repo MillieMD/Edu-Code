@@ -1,4 +1,7 @@
 <?php
+
+include "connect_db.php";
+
 session_start();
 
 $db = $connect_db("u2259541");
