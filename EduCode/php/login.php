@@ -1,10 +1,7 @@
 <?php
-
-include "connect_db.php";
+include "connect_db.php"; // Connection is instantiated in connect_db.pph
 
 session_start();
-
-$db = $connect_db("u2259541");
 
 $sql = $db->prepare("SELECT userid, userPassword FROM users WHERE email = ?;");
 $sql->bind_param("s", $_POST["email"]);

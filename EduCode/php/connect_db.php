@@ -1,19 +1,10 @@
 <?php 
+require_once "config.php"; // Not included in GitHub Repo for safety, this is the source for $servername, $username etc
 
-function connect(string $dbname){
-    $servername = "localhost";
-    $username = ""; // Not uploading my username and password to a public github repo
-    $password = "";
-    
-    $db = new mysqli($servername, $username, $password, $dbname);
+$db = new mysqli($servername, $username, $password, $dbname);
 
-    if($db->connect_error){
-
-        die("Could not connect to data base: " .$db->connect_error);
-        // TODO: Redirect to error page for database
-    }
-
-    return $db;
+if($db->connect_error){
+    header("location: ../pages/errors/database_error.php");
 }
 
 ?>

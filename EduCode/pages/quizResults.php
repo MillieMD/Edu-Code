@@ -56,27 +56,17 @@
         </div>
     </div>
 
-    <!-- Title : Quiz -->
-    <!-- Java button Python toggle -->
+    <?php
+    
+            require_once "../php/connect_db.php";
 
-    <form id = "quiz-selector"> 
+            start_session();
 
-        <h3> Which language are you learning? </h3>
+            
+    
+    
+    ?>
 
-            <span>
-                <label for = "language">Java</label>
-                <input type = "radio" name = "language" value = "J">
-
-                <input type = "radio" name = "language" value = "P">
-                <label for = "language">Python</label>
-            </span>
-
-            <p id = "warning"></p>
-
-
-        <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
-
-    </form>
 
     <div class = "footer" id = "footer">
 

@@ -1,11 +1,8 @@
 <?php
 
-include "connect_db.php";
+require_once "connect_db.php"; // Connection is instantiated in connect_db.pph
 
 session_start();
-
-//connect to db
-$db = connect("u2259541");
 
 // define insert query
 $sql = $db->prepare("INSERT INTO ac_users (username, email, userPassword) VALUES (?, ?, ?);");

@@ -1,0 +1,59 @@
+{
+    "J":[
+        {
+            "topic": "Variables",
+
+            "question": "Which of these is a valid variable name in Java?", 
+            "answers":["_int", "int", "1stNumber"]
+        },
+
+        {
+            "topic": "Encapsulation",
+    
+            "question": "Which of these is not a access modifier in Java?", 
+            "answers":["global", "public", "private", "protected", "default"]
+        },
+
+        {
+            "topic": "Objects",
+    
+            "question": "Which of these is the correct keyword for instantiating a Java class?", 
+            "answers":["new", "create", "There is no keyword", "instance"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "How many primitive classes are there in Java?", 
+            "answers":["6", "4", "5", "8"]
+        },
+
+        {
+            "topic": "Objects",
+    
+            "question": "Java is a statically-typed language. True or False?", 
+            "answers":["True", "False"]
+        }
+
+    ],
+ 
+    "P":[
+        {
+            "topic": "Variables",
+
+            "question": "Which of these is a not a primitive data type in Python?", 
+            "answers":["double", "float", "string", "int", "bool"]
+        }
+    ],
+
+    "shared":[
+
+        {
+            "topic": "Variables",
+
+            "question": "Which of these variable names is in 'camel case'?",
+            "answers":["myInt", "Myint", "myint", "MyInt"]
+        }
+    ]
+
+}
