@@ -11,8 +11,15 @@ Tidy up HTML and CSS by clearly renaming classes and removing unecessary bloat, 
   - [ ] Tutorial information per topic, per language
   - [ ] Fill in the gap activities, atleast 1 per topic, per language
   - [ ] Quiz questions to identify weak topics
-  - [ ] User sign up
-  - [x] User profiles
+    - [x] Generate up to 10 random questions with multiple choice answers
+    - [ ] Check user answers and tell them their grade as a percentage
+    - [ ] Tell them any topics they got questions wrong on
+    - [ ] save as a quiz attempt in database
+  - [x] User sign up
+  - [ ] User profiles
+    - [x] log in 
+    - [ ] dials (a la credit scores) to show tutorial and activity progress
+    - [ ] "Next Steps:" link (tutorial if activity count == tutorial count)
   - [ ] Track user activiy attempts
   - [ ] Teacher accounts to track their students progress
 
