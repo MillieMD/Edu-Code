@@ -2,10 +2,9 @@
 <html>
 
 <head>
-    <title>Test yourself with a quiz! - edu:Code</title>
-
     <link rel = 'stylesheet' href = "../css/main.css">
     <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
+    <title> Learn Python with edu:Code </title>
 </head>
 
 <body>
@@ -25,7 +24,7 @@
         <div class = 'header-right'>
 
 
-            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
 
             <?php
             session_start();
@@ -57,30 +56,16 @@
             ?>
         </div>
     </div>
+    
+    <div class = 'title-section' style = 'background-color: #0099ff;'>
+        <div class = 'title'>Contact</div>
+    </div>
 
-    <!-- Title : Quiz -->
-    <!-- Java button Python toggle -->
+    <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
+        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
+    </svg>
 
-    <form id = "quiz-selector"> 
-
-        <h3> Which language are you learning? </h3>
-
-            <span>
-                <label for = "language">Java</label>
-                <input type = "radio" name = "language" value = "J">
-
-                <input type = "radio" name = "language" value = "P">
-                <label for = "language">Python</label>
-            </span>
-
-            <p id = "warning"></p>
-
-
-        <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
-
-    </form>
-
-    <div class = "footer" id = "footer">
+    <div class = "footer">
 
         <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
         <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
@@ -91,8 +76,6 @@
            <br> Get started today! </p>
 
     </div>
-
-    <script src = "../js/quiz.js"> </script>
 
 </body>   
 </html>

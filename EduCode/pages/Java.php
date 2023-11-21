@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title> Learn Java with edu:Code </title>
+
     <link rel = 'stylesheet' href = "../css/main.css">
     <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
 </head>

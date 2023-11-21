@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <title>Test yourself with a quiz! - edu:Code</title>
+
     <link rel = 'stylesheet' href = "../css/main.css">
     <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
 </head>
@@ -43,10 +45,10 @@
             } else{
 
                 echo(" 
-                <a href = 'pages/login.html'>
+                <a href = 'login.html'>
                 <button class = 'button-blue'>Log in</button>
                 </a>
-                <a href = 'pages/register.html'>
+                <a href = 'register.html'>
                 <button class = 'button-dark'>Register</button>
                 </a>
 
@@ -55,18 +57,6 @@
             ?>
         </div>
     </div>
-
-    <?php
-    
-            require_once "../php/connect_db.php";
-
-            start_session();
-
-            
-    
-    
-    ?>
-
 
     <div class = "footer" id = "footer">
 
