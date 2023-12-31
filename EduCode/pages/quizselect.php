@@ -103,35 +103,41 @@
 
             let question = document.getElementById("question-"+currentQuestion);
 
-            var options = document.getElementsByName("answer"+(currentQuestion+1));
+            // All radio answers for that question
+            var options = document.getElementsByName("answer"+currentQuestion);
             var givenAnswer = null;
 
+            // Find the radio button that is checked
+            // TODO: check what happens to score when no radio button pressed
             for(var i = 0; i < options.length; i++){
                 if(options[i].checked){
-                    givenAnswer = options[i].value;
+                    if(question.dataset.answer == options[i].value){
+                        score++; // If answer in checked box is correct, increment score
+                    }
                 }
             }
 
-            if(question.dataset.answer == givenAnswer){
-                score++;
+            question.style.display = "none"; // Remove question after checking
+            currentQuestion++; // Increment question number
+
+            if(currentQuestion == DEFAULT_QUANTITY){ // If button pressed on last question --> submit results
+
+                document.getElementById("next-button").style.display = "none";
+
+                var lang = document.getElementById("quiz-wrapper").dataset.language;
+                window.location = "quizresults.php?score="+score+"&lang="+lang+"&q="+DEFAULT_QUANTITY;
+                return false;
             }
 
-            question.style.display = "none";
-            currentQuestion++;
-            document.getElementById("question-"+currentQuestion).style.display = "inline";
-
-            if(currentQuestion == DEFAULT_QUANTITY-2){
+            // If current question is the last question, change button text to "Finish Quiz"
+            if(currentQuestion == DEFAULT_QUANTITY-1){
                 // Change button text
                 document.getElementById("next-button").innerText = "Finish Quiz";
 
             }
 
-            if(currentQuestion == DEFAULT_QUANTITY-1){
+            document.getElementById("question-"+currentQuestion).style.display = "inline"; // Display next question
 
-                var lang = document.getElementById("quiz-wrapper").dataset.language;
-
-                window.location = "quizresults.php?score="+score+"&lang="+lang;
-            }
         }
 
     </script>

@@ -32,8 +32,6 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
     let questions = response[language].sort((a, b) => 0.5 - Math.random());;
 
-    console.log(questions);
-
     // Create wrapper element for questions to reside in
     const quizWrapper = document.createElement("form");
     quizWrapper.setAttribute("action", "quizresults.php");
@@ -98,12 +96,12 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
             // Answer radio button
             let a = document.createElement("input");
             a.setAttribute("type", "radio");
-            a.setAttribute("name", "answer" + (i+1));
+            a.setAttribute("name", "answer" + i);
             a.value = answers[j];
             
             // Answer label
             let l = document.createElement("label");
-            l.setAttribute("for", "answer"+ (i+1));
+            l.setAttribute("for", "answer"+ i);
             l.innerHTML = answers[j];
 
             q.append(a);

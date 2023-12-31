@@ -36,7 +36,7 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
+                <a href = 'profile.php'>
                 <button class = 'button-dark'><h5>Profile</h5></button>
                 </a>
                 ");
@@ -55,6 +55,79 @@
             }
             ?>
         </div>
+    </div>
+
+    <?php
+
+            $score = ($_GET["score"]/$_GET["q"] * 100);
+    
+            echo("<h4>");
+
+            if($score < 20){
+                echo("Better luck next time...");
+            }elseif($score < 40){
+                echo("Getting there!");
+            }elseif($score == 50){
+                echo("Wo-ah we're half way there!");
+            }elseif($score < 60){
+                echo("Nice effort!");
+            }elseif($score < 80){
+                echo("Well done!");
+            }elseif($score < 99){
+                echo("Amazing!");
+            }else{
+                echo("Perfect score!");
+            }
+
+            echo("</h4>");
+    ?>
+
+    <div id = "progress-bar"></div>
+
+    <div class = "hor-flex"> 
+
+            <?php
+                echo("<h4>".$score."%</h4>");
+                
+            ?>
+
+            <!-- Vertical divider -->
+
+            <?php
+            
+                require_once "../php/connect_db.php";
+               
+                // If logged in, submit score to database, echo message saying score was saved
+                if($_SESSION["userid"] > 0){
+
+                    // ec_quizattempts has fields userID, datetime, score, language
+                    $query = $db->prepare("INSERT INTO ec_quizattempts VALUES(? ? ? ?)");
+                    $query->bind_param("isis", $_SESSION["userid"], time() ,$score, $_GET["lang"]);
+
+                    // Helpful message, and button to view profile
+                    echo("Quiz results saved. View now on your profile");
+                    echo("<a href = '#'>
+                        <button class = 'button-dark'><h5>Profile</h5></button>
+                        </a>");
+
+                }else{ // Else, prompt users to sign up to save their scores next time
+
+                    echo("Log in or Register to save your scores next time:");
+
+                    echo("<a href = 'login.html'>
+                        <button class = 'button-blue'><h5>Log in</h5></button>
+                        </a>
+                        <a href = 'register.html'>
+                        <button class = 'button-dark'><h5>Register</h5></button>
+                        </a>");
+
+                }
+
+
+            
+            ?>
+
+
     </div>
 
     <div class = "footer" id = "footer">

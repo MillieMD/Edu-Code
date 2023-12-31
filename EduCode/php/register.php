@@ -1,15 +1,15 @@
 <?php
 
-require_once "connect_db.php"; // Connection is instantiated in connect_db.pph
+require_once "connect_db.php"; // Connection is instantiated in connect_db.php
 
 session_start();
 
-// define insert query
-$sql = $db->prepare("INSERT INTO ac_users (username, email, userPassword) VALUES (?, ?, ?);");
+// Insert new account details into users
+$sql = $db->prepare("INSERT INTO ec_users (username, email, userPassword) VALUES (?, ?, ?);");
 $sql->bind_param("sss",$_POST["username"], $_POST["email"], $_POST["password"],);
 $sql->execute();
 
-// define query to auto log in new user
+// Fetches new users user ID to auto log in user
 $sql = $db->prepare("SELECT userID FROM ac_users WHERE email = ?;");
 $sql->bind_param("s", $_POST["email"]);
 $sql->execute();

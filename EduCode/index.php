@@ -57,13 +57,13 @@
         </div>
     </div>
     
-    <div class = 'title-section' style = 'background-color: #0099ff; max-width: 100%;'>
+    <div class = 'title-section' style = ' max-width: 100%;'>
         <h1 style = "padding: 8vw;">{edu:Code}</h1>
         <button class = "button-dark"> <h5> Start Learning </h5> </button>
     </div>
 
     <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
+        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#007BFF"></path>
     </svg>
 
         <div class = "info-section">
@@ -71,13 +71,12 @@
             <div> 
                 <h2> Why edu:Code? </h2>
                 Practical application of programming skills is the most effective way to learn to code, 
-                which is why Arc Code provides opportunities to put lessons to use in fill-in-the-blank activies. 
+                so we give you the chance to put lessons to use in fill-in-the-blank activies. 
                 You are provided clear error messages, to teach you to debug and correct your own code. 
                 <br> <br>
-                We carefully tailors the learning experience to you, 
-                through the use of quizzes which the you can take at anytime to highlight areas for improvement.
-                When the you first start you may take an aptitude test, to recieve reccommendations for where to start.
-                The activities you have completed are stored on your profile for them to identify strengths and weaknesses.
+                We carefully tailor the learning experience to you, 
+                through quizzes which the you can take at anytime to highlight your strengths and weaknesses,
+                and a log of the activities you've completed to identify next steps.
             </div>
 
             <img src = "images/logolight.png">

@@ -2,11 +2,17 @@
 
 :root{
 
-    --blue: #0099ff;
-    --off_white: #f9f9f9;
-    --black: #000000;
+    --dark-blue: #006de1;
+    --light-blue: #007BFF;
 
-    --bg: #eeeeee;
+    --orange: #F39237;
+    --green:#03DC41;
+    --red: #D62839;
+
+    --grey: #e2ddda;
+    --white: #F6F0ED;
+    --black: #090C08;
+
 }
 
 /*
@@ -50,8 +56,8 @@ p{
 
 .button-blue{
 
-    background-color: var(--blue);
-    color: var(--off_white);
+    background-color: var(--light-blue);
+    color: var(--white);
 
     border: none;
     border-radius: 5px;
@@ -64,14 +70,14 @@ p{
 
 .button-blue:hover{
 
-    background-color: var(--off_white);
-    color: var(--blue)
+    background-color: var(--dark-blue);
+    color: var(--white)
 
 }
 
 .button-light{
 
-    background-color: var(--off_white);
+    background-color: var(--white);
     color: var(--black);
 
     border: none;
@@ -85,15 +91,15 @@ p{
 
 .button-light:hover{
 
-    background-color: var(--black);
-    color: var(--off_white);
+    background-color: var(--grey);
+    color: var(--black);
 
 }
 
 .button-dark{
 
     background-color: var(--black);
-    color: var(--off_white);
+    color: var(--white);
 
     border: none;
     border-radius: 5px;
@@ -107,7 +113,7 @@ p{
 
 .button-dark:hover{
 
-    background-color: var(--off_white);
+    background-color: var(--white);
     color: var(--black);
 
 }
@@ -134,7 +140,7 @@ body{
 
     margin: 0;
 
-    background-color: var(--bg);
+    background-color: var(--white);
 
     font-family: monospace;
 }
@@ -146,10 +152,11 @@ body{
     justify-content: space-between;
 
     position: sticky;
+    z-index: 10;
     top:0;
     width: 100%;
 
-    background-color: var(--blue);
+    background-color: var(--light-blue);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
@@ -177,8 +184,10 @@ body{
 
     text-align: center;
 
-    background-color: var(--blue);
-    color: var(--off_white);
+    background-color: var(--light-blue);
+    color: var(--white);
+
+    z-index: 10;
 
     width: 100% - 4vw;
 
@@ -191,18 +200,23 @@ body{
     text-align: left;
 
     min-width: 20%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 1;
+    overflow-y: scroll;
 }
 
 .side-bar p{
-    background: var(--blue);
+    background: var(--dark-blue);
 }
 
-.side-bar:nth-child(even){
-    background-color: var(--bg);
+.side-bar :nth-child(even){
+    background-color: var(--white);
 }
 
-.side-bar:nth-child(odd){
-    background-color: var(--off_white);
+.side-bar :nth-child(odd){
+    background-color: var(--grey);
 }
 
 /* Titles */
@@ -211,6 +225,8 @@ body{
 
     width: 100%;
     text-align: center;
+
+    background-color: var(--light-blue);
 }
 
 /* Information */
@@ -245,6 +261,18 @@ body{
 
 }
 
+/* Multi Use Sections */
+
+.hor-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.ver-flex{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Image */
 
 .image-span img{
@@ -263,7 +291,6 @@ form{
 
 
     padding-bottom: 1vw;
-
 }
 
 input{
