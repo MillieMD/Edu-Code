@@ -14,11 +14,11 @@
 
         <div class = 'header-left'>
 
-            <a href = "index.php"><button class = "button-blue">Home</button></a>
+            <a href = "index.php"><button class = "button-blue"><h5>Home</h5></button></a>
 
-            <a href = "pages/java.php"><button class = "button-blue">Java</button></a>
+            <a href = "pages/java.php"><button class = "button-blue"><h5>Java</h5></button></a>
 
-            <a href = "pages/python.php"><button class = "button-blue">Python</button></a>
+            <a href = "pages/python.php"><button class = "button-blue"><h5>Python</h5></button></a>
 
         </div>  
 
@@ -37,7 +37,7 @@
 
                 echo("
                 <a href = '#'>
-                <button class = 'button-dark'>Profile</button>
+                <button class = 'button-dark'><h5>Profile</h5></button>
                 </a>
                 ");
 
@@ -45,10 +45,10 @@
 
                 echo(" 
                 <a href = 'pages/login.html'>
-                <button class = 'button-blue'>Log in</button>
+                <button class = 'button-blue'><h5>Log in</h5></button>
                 </a>
                 <a href = 'pages/register.html'>
-                <button class = 'button-dark'>Register</button>
+                <button class = 'button-dark'><h5>Register</h5></button>
                 </a>
 
                 ");
@@ -57,9 +57,9 @@
         </div>
     </div>
     
-    <div class = 'title-section' style = 'background-color: #0099ff;'>
-        <div class = 'title'>{edu:Code}</div>
-        <button class = "button-dark"> Start Learning </button>
+    <div class = 'title-section' style = 'background-color: #0099ff; max-width: 100%;'>
+        <h1 style = "padding: 8vw;">{edu:Code}</h1>
+        <button class = "button-dark"> <h5> Start Learning </h5> </button>
     </div>
 
     <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
@@ -69,7 +69,7 @@
         <div class = "info-section">
         
             <div> 
-                <h1> Why edu:Code? </h1>
+                <h2> Why edu:Code? </h2>
                 Practical application of programming skills is the most effective way to learn to code, 
                 which is why Arc Code provides opportunities to put lessons to use in fill-in-the-blank activies. 
                 You are provided clear error messages, to teach you to debug and correct your own code. 

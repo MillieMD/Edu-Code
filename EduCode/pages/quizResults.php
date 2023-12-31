@@ -14,23 +14,22 @@
 
         <div class = 'header-left'>
 
-            <a href = "../index.php"><button class = "button-blue">Home</button></a>
+            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
 
-            <a href = "java.php"><button class = "button-blue">Java</button></a>
+            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
 
-            <a href = "python.php"><button class = "button-blue">Python</button></a>
+            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
 
         </div>  
 
         <div class = 'header-right'>
-
 
             <!-- If user logged in, link to profile, else give options to sign in or sign up -->
 
             <?php
             session_start();
 
-            if($_SESSION["user_id"] === null){
+            if(!isset($_SESSION["user_id"])){
                 $_SESSION["user_id"] = 0;
             }
 
@@ -38,7 +37,7 @@
 
                 echo("
                 <a href = '#'>
-                <button class = 'button-dark'>Profile</button>
+                <button class = 'button-dark'><h5>Profile</h5></button>
                 </a>
                 ");
 
@@ -46,10 +45,10 @@
 
                 echo(" 
                 <a href = 'login.html'>
-                <button class = 'button-blue'>Log in</button>
+                <button class = 'button-blue'><h5>Log in</h5></button>
                 </a>
                 <a href = 'register.html'>
-                <button class = 'button-dark'>Register</button>
+                <button class = 'button-dark'><h5>Register</h5></button>
                 </a>
 
                 ");

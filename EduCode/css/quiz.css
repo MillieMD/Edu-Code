@@ -1,0 +1,54 @@
+/* Quiz CSS */
+
+:root{
+
+    --blue: #0099ff;
+    --off_white: #f9f9f9;
+    --black: #000000;
+
+    --bg: #eeeeee;
+}
+
+.quiz-question{
+    
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+
+    text-align: center;
+    align-items: middle;
+
+    border: 1px solid;
+}
+
+.quiz-question .question, .quiz-question .answer-option{
+    
+    display: flex;
+    flex-direction: row;
+
+}
+
+.quiz-question .question{
+    border-bottom: 1px solid;
+}
+
+.quiz-question .question h5{
+    background-color: var(--black);
+    color: var(--off_white);
+    width: 20%;
+
+}
+
+.quiz-question .question h6{
+    background-color: var(--off_white);
+    width:80%;
+
+}
+
+.quiz-question .answer-option{
+    background-color: var(--off_white);
+}
+
+
+

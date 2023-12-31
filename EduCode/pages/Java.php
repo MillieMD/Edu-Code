@@ -4,7 +4,7 @@
 <head>
     <title> Learn Java with edu:Code </title>
 
-    <link rel = 'stylesheet' href = "../css/main.css">
+    <link rel = 'stylesheet' href = '../css/main.css'>
     <link rel= 'icon' href='../images/logodark.png' type='image/x-icon'>
 </head>
 
@@ -14,11 +14,11 @@
 
         <div class = 'header-left'>
 
-            <a href = "../index.php"><button class = "button-blue">Home</button></a>
+            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
 
-            <a href = "java.php"><button class = "button-blue">Java</button></a>
+            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
 
-            <a href = "python.php"><button class = "button-blue">Python</button></a>
+            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
 
         </div>  
 
@@ -38,7 +38,7 @@
 
                 echo("
                 <a href = '#'>
-                <button class = 'button-dark'>Profile</button>
+                <button class = 'button-dark'><h5>Profile</h5></button>
                 </a>
                 ");
 
@@ -46,10 +46,10 @@
 
                 echo(" 
                 <a href = 'login.html'>
-                <button class = 'button-blue'>Log in</button>
+                <button class = 'button-blue'><h5>Log in</h5></button>
                 </a>
                 <a href = 'register.html'>
-                <button class = 'button-dark'>Register</button>
+                <button class = 'button-dark'><h5>Register</h5></button>
                 </a>
 
                 ");
@@ -57,28 +57,34 @@
             ?>
         </div>
     </div>
-    
-    <div class = 'title-section' style = 'background-color: #0099ff;'>
-        <div class = 'title'>Java</div>
-    </div>
 
-    <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
-    </svg>
+    <div style = "display: flex; flex-direction: row;">
 
-    <div class = "info-section"> 
+        <div class = "side-bar"> 
 
-        <img src = "../images/java.png">
-        
-        <div>
+                <p> Tutorials </p>
 
-            Java is a very common, object-oriented language. 
-            It is used to create many different types of programs from mobile games to big data processing.
-            To run java programs you need a Java Runtime Environment, to write Java programs you will need a Java Development Kit, 
-            the lastest version of which can be installed <a href = "https://www.python.org/downloads/">here</a>
+                <span><a href = "#"> Topic 0 </a></span>
+                <span><a href = "#"> Topic 0 </a></span>
+                <span><a href = "#"> Topic 0 </a></span>
+                <span><a href = "#"> Topic 0 </a></span>
+        </div>
+
+        <div class = "main-content">
+
+            <div class = 'title-section' style = 'background-color: #0099ff;'>
+                <div class = 'title'>Python</div>
+            </div>
+
+            <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
+                <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
+            </svg>
+
+            <!-- Information -->
+            <!-- Try quiz button -->
 
         </div>
-    
+
     </div>
 
     <div class = "footer">

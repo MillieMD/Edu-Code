@@ -29,11 +29,55 @@
         },
 
         {
+            "topic": "Variables",
+    
+            "question": "How many bits is a long in Java?", 
+            "answers":["64", "48", "32", "128"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "What is the default value of a long in Java?", 
+            "answers":["0", "1", "-1", "null"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "How many bits is an int in Java?", 
+            "answers":["32", "48", "64", "128"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "What is the default value of an int in Java?", 
+            "answers":["0", "1", "-1", "null"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "How many bits is a short in Java?", 
+            "answers":["16", "64", "32", "128"]
+        },
+
+        {
+            "topic": "Variables",
+    
+            "question": "What is the default value of a short in Java?", 
+            "answers":["0", "1", "-1", "null"]
+        },
+
+        {
             "topic": "Objects",
     
             "question": "Java is a statically-typed language. True or False?", 
             "answers":["True", "False"]
         }
+
+        
 
     ],
  

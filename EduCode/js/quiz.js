@@ -32,10 +32,14 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
     let questions = response[language].sort((a, b) => 0.5 - Math.random());;
 
+    console.log(questions);
+
     // Create wrapper element for questions to reside in
     const quizWrapper = document.createElement("form");
-    quizWrapper.setAttribute("action", "quizResults.php");
+    quizWrapper.setAttribute("action", "quizresults.php");
     quizWrapper.setAttribute("method", "POST");
+    quizWrapper.dataset.language = language;
+    quizWrapper.id = "quiz-wrapper";
     quizWrapper.classList.add("quiz-wrapper");
 
     // Put wraper on end, then put footer on the end (deletes/moves old footer)
@@ -52,8 +56,14 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
         const e = document.createElement("div");
         e.classList.add("quiz-question");
+        e.id = "question-" + i; // Id for navigating between questions
         e.dataset.answer = currentQuestion["answers"][0];
         e.dataset.topic = currentQuestion["topic"];
+
+        // Hide all but first questions
+        if(i > 0){
+            e.style.display = "none";
+        }
 
         // Format of e:
         /* <h4> i. question?
@@ -65,32 +75,61 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
             <radio button>
         
         */
+       
+        let title = document.createElement("div");
+        title.classList.add("question");
 
-        e.insertAdjacentHTML("afterbegin", "<h4> " + (i+1) + ". " + currentQuestion["question"] + "</h4>");
-        let answers = currentQuestion["answers"].sort((a, b) => 0.5 - Math.random()); // shuffle array so correct answer != answers[0]
+        title.insertAdjacentHTML("afterbegin", "<h5> " + (i+1) + "</h5>"); // Quiz number
+        title.insertAdjacentHTML("beforeend", "<h6> " + currentQuestion["question"] + "</h6>") // Quiz question
+
+
+        e.append(title);
+
+        let answers = currentQuestion["answers"].sort((a, b) => 0.5 - Math.random()); // Shuffle array so correct answer != answers[0]
 
         quizWrapper.append(e);
 
         // Add a radio button for each answer (with appropriate label)
         for(j = 0; j < answers.length; j++){
 
+            let q = document.createElement("div");
+            q.classList.add("answer-option");
+
             // Answer radio button
             let a = document.createElement("input");
             a.setAttribute("type", "radio");
-            a.setAttribute("name", "question" + (i+1));
+            a.setAttribute("name", "answer" + (i+1));
+            a.value = answers[j];
             
             // Answer label
             let l = document.createElement("label");
-            l.setAttribute("for", "question"+ (i+1));
+            l.setAttribute("for", "answer"+ (i+1));
             l.innerHTML = answers[j];
 
-            e.append(a);
-            e.append(l);
+            q.append(a);
+            q.append(l);
+
+            e.append(q);
         }
         
     }
 
-    console.log("ESCAPED THE FORLOOP");
-    quizWrapper.insertAdjacentHTML("beforeend", "<button type = 'submit' class = 'button-dark'> Submit Results </button>");
+    let next = document.createElement("button");
+    next.classList.add("button-dark");
+    next.setAttribute("type", "button");
+    next.setAttribute("onclick", "nextQuestion()");
+    next.innerHTML = "Next Question";
+    next.id = "next-button";
+
+    quizWrapper.append(next);
+
+    // let submit = document.createElement("button");
+    // submit.classList.add("button-dark");
+    // submit.setAttribute("type", "submit");
+    // submit.style.display = "none";
+    // submit.innerHTML = "Finish Quiz";
+    // submit.id = "submit-button";
+
+    // quizWrapper.append(submit);
 
 }
