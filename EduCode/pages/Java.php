@@ -72,7 +72,7 @@
 
         <div class = "main-content">
 
-            <div class = 'title-section' style = 'background-color: #0099ff;'>
+            <div class = 'title-section'>
                 <div class = 'title'>Python</div>
             </div>
 

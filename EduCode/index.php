@@ -57,7 +57,7 @@
         </div>
     </div>
     
-    <div class = 'title-section' style = ' max-width: 100%;'>
+    <div class = 'title-section' style = 'max-width: 100%;'>
         <h1 style = "padding: 8vw;">{edu:Code}</h1>
         <button class = "button-dark"> <h5> Start Learning </h5> </button>
     </div>

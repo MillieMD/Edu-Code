@@ -26,11 +26,16 @@ function quizSelect(){
 
 async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
-    // Get questions json
+    // Get questions json file
     let response = await fetch("../js/quiz.json");
     response = await response.json();
 
-    let questions = response[language].sort((a, b) => 0.5 - Math.random());;
+    console.log(response);
+
+    // Shuffle questions, so they aren't the same ones on every quiz
+    let questions = response[language].sort((a, b) => 0.5 - Math.random()); 
+    console.log(questions);
+    console.log(questions.length);
 
     // Create wrapper element for questions to reside in
     const quizWrapper = document.createElement("form");
@@ -40,7 +45,7 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
     quizWrapper.id = "quiz-wrapper";
     quizWrapper.classList.add("quiz-wrapper");
 
-    // Put wraper on end, then put footer on the end (deletes/moves old footer)
+    // Put wraper on end, then put footer on the end (deletes + reapplies/moves old footer)
     document.body.append(quizWrapper);
     document.body.append(document.getElementById("footer"));
 
@@ -71,6 +76,8 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
             <label>
             <radio button>
+
+            ...
         
         */
        
@@ -112,22 +119,13 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
         
     }
 
+    // Button to navigate to next question
     let next = document.createElement("button");
     next.classList.add("button-dark");
     next.setAttribute("type", "button");
-    next.setAttribute("onclick", "nextQuestion()");
+    next.setAttribute("onclick", "nextQuestion()"); // Function written in quizselect.php
     next.innerHTML = "Next Question";
     next.id = "next-button";
 
     quizWrapper.append(next);
-
-    // let submit = document.createElement("button");
-    // submit.classList.add("button-dark");
-    // submit.setAttribute("type", "submit");
-    // submit.style.display = "none";
-    // submit.innerHTML = "Finish Quiz";
-    // submit.id = "submit-button";
-
-    // quizWrapper.append(submit);
-
 }
