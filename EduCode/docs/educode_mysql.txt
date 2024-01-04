@@ -1,0 +1,32 @@
+# Initialise tables
+
+DROP IF EXISTS ec_users;
+
+CREATE TABLE ec_users(
+
+    userID INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(320), # Theoretical maximum email address
+    pass BINARY(60), # Hashed with bcrypt
+    username VARCHAR(16),
+    isTeacher BIT # True or false flag
+);
+
+DROP IF EXISTS ec_class;
+
+CREATE TABLE ec_class(
+
+    classID INT PRIMARY KEY AUTO_INCREMENT,
+    teacherID INT,
+    className VARCHAR(10) # More identifiable than number
+);
+
+DROP IF EXISTS ec_studentinclass;
+
+CREATE TABLE ec_studentinclass(	
+    clasSID INT,
+    studentID INT
+
+);
+
+
+

@@ -9,12 +9,12 @@ $sql->execute();
 $result = $sql->get_result();
 
 if ($result === FALSE){
-    die("<html><body><h1> Error: Query unsuccessful </h1> <p>Arc Code are sorry for the inconvinience, please try again later  </p></body></html>");
-    return 0;
+    header("location: /errors/database_error.php");
+    exit()
 }
 
 if ($result == null){
-    die("no user found");
+    die("location: register.html");
 }
 
 $row = $result->fetch_assoc();

@@ -25,7 +25,6 @@ $row = $result->fetch_assoc();
 
 // log in
 $_SESSION["id"] = $row["userID"];
-print_r($_SESSION["id"]);
 
 header("Location: ../index.php", 301);
 exit();
