@@ -120,23 +120,17 @@ p{
 
 /* == SECTIONS == */
 
-
 /* Background */
 
 html{
     height: 100%; 
+    width: 100%;
     /* Required for body min-height: 100% */
 }
 
 body{
-
-    /* Always place footer at the very bottom of screen, 
-    even when content isn't that big*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
     min-height: 100%;
+    width: 100%;
 
     margin: 0;
 
@@ -187,9 +181,11 @@ body{
     background-color: var(--light-blue);
     color: var(--white);
 
+    position: relative;
     z-index: 10;
+    bottom: 0;
 
-    width: 100% - 4vw;
+    width: 96%;
 
 }
 
@@ -197,26 +193,24 @@ body{
 
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 
-    min-width: 20%;
-    height: 100%;
+    float: left;
 
-    position: absolute;
-    z-index: 1;
+    width: 15%;
+
     overflow-y: scroll;
+
+    background-color: var(--grey);
+    color: var(--white);
 }
 
-.side-bar p{
+.side-bar h5, .side-bar h6{
     background: var(--dark-blue);
 }
 
-.side-bar :nth-child(even){
-    background-color: var(--white);
-}
-
-.side-bar :nth-child(odd){
-    background-color: var(--grey);
+.side-bar a{
+    font-size: 1.3em;
 }
 
 /* Titles */
@@ -266,11 +260,18 @@ body{
 .hor-flex{
     display: flex;
     flex-direction: row;
+
 }
 
 .ver-flex{
     display: flex;
     flex-direction: column;
+
+    height:100%;
+}
+
+.main-content{
+    text-align: center;
 }
 
 /* Image */

@@ -58,29 +58,59 @@
         </div>
     </div>
 
-    <div style = "display: flex; flex-direction: row;">
+    <div style = >
 
         <div class = "side-bar"> 
 
-                <p> Tutorials </p>
+                <h5 > Tutorials </h5>
 
-                <span><a href = "#"> Topic 0 </a></span>
-                <span><a href = "#"> Topic 0 </a></span>
-                <span><a href = "#"> Topic 0 </a></span>
-                <span><a href = "#"> Topic 0 </a></span>
+
+                <h6> The Basics </h6>
+
+                <a href = "#"> Getting started </a>
+                <a href = "#"> Operators </a>
+                <a href = "#"> Variables </a>
+                <a href = "#"> Data Types </a>
+                <a href = "#"> Strings </a>
+                <a href = "#"> If-Else </a>
+                <a href = "#"> While loops </a>
+                <a href = "#"> For Loops </a>
+                <a href = "#"> Switch Statements </a>
+                <a href = "#"> Arrays </a>
+
+                <h6> Methods </h6>
+
+                <a href = "#"> Methods </a>
+                <a href = "#"> Method Overriding </a>
+                <a href = "#"> Access Modifiers </a>
+                <a href = "#"> Testing </a>
+
+                <h6> Object Oriented Programming </h6>
+
+                <a href = "#"> Classes </a>
+                <a href = "#"> Encapsulation </a>
+                <a href = "#"> Inheritance </a>
+                <a href = "#"> Polymorphism </a>
+                <a href = "#"> Abstract Classes </a>
+                <a href = "#"> Interfaces </a>
+
+                <h5> Projects </h5>
+
+                <a href = "#">  </a>
+
         </div>
 
         <div class = "main-content">
 
-            <div class = 'title-section'>
-                <div class = 'title'>Python</div>
+            <h1> Java </h1>
+
+            <div class = "info-section">
+                <div>
+                    Java is one of the most popular programming languages. It is used in a range of use cases, from games development to big-data, by over 30% of developers across the globe.
+                </div>
+
+                <img src = "../images/java.png">
             </div>
-
-            <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-                <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
-            </svg>
-
-            <!-- Information -->
             <!-- Try quiz button -->
 
         </div>
