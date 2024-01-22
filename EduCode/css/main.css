@@ -191,6 +191,12 @@ header ul li a{
     padding: 0.8vw 0.8vw;
 }
 
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 footer{
 
@@ -229,7 +235,7 @@ footer{
     transform: translateY(0%);
 }
 
-.side-bar{
+aside{
 
     display: flex;
     flex-direction: column;
@@ -245,11 +251,11 @@ footer{
     color: var(--white);
 }
 
-.side-bar h5, .side-bar h6{
+aside h5, aside h6{
     background: var(--dark-blue);
 }
 
-.side-bar a{
+aside a{
     font-size: 1.3em;
 }
 

@@ -55,45 +55,64 @@
 
     <main id = "main">
 
-        <div class = "side-bar"> 
+        <aside> 
 
                 <h5 > Tutorials </h5>
 
+                <nav>
 
-                <h6> The Basics </h6>
+                    <h6> The Basics </h6>
 
-                <a href = "#"> Getting started </a>
-                <a href = "#"> Operators </a>
-                <a href = "#"> Variables </a>
-                <a href = "#"> Data Types </a>
-                <a href = "#"> Strings </a>
-                <a href = "#"> If-Else </a>
-                <a href = "#"> While loops </a>
-                <a href = "#"> For Loops </a>
-                <a href = "#"> Switch Statements </a>
-                <a href = "#"> Arrays </a>
+                    <ul>
 
-                <h6> Methods </h6>
+                    <li> <a href = "#"> Getting started </a> </li>
+                    <li> <a href = "#"> Operators </a> </li>
+                    <li> <a href = "#"> Variables </a> </li>
+                    <li> <a href = "#"> Data Types </a> </li>
+                    <li> <a href = "#"> Strings </a> </li>
+                    <li> <a href = "#"> If-Else </a> </li>
+                    <li> <a href = "#"> While loops </a> </li>
+                    <li> <a href = "#"> For Loops </a> </li>
+                    <li> <a href = "#"> Switch Statements </a> </li>
+                    <li> <a href = "#"> Arrays </a> </li>
 
-                <a href = "#"> Methods </a>
-                <a href = "#"> Method Overriding </a>
-                <a href = "#"> Access Modifiers </a>
-                <a href = "#"> Testing </a>
+                    </ul>
 
-                <h6> Object Oriented Programming </h6>
+                    <h6> Methods </h6>
 
-                <a href = "#"> Classes </a>
-                <a href = "#"> Encapsulation </a>
-                <a href = "#"> Inheritance </a>
-                <a href = "#"> Polymorphism </a>
-                <a href = "#"> Abstract Classes </a>
-                <a href = "#"> Interfaces </a>
+                    <ul>
+
+                    <li> <a href = "#"> Methods </a> </li>
+                    <li> <a href = "#"> Method Overriding </a> </li>
+                    <li> <a href = "#"> Access Modifiers </a> </li>
+                    <li> <a href = "#"> Testing </a> </li>
+
+                    </ul>
+
+                    <h6> Object Oriented Programming </h6>
+
+                    <ul>
+
+                    <li> <a href = "#"> Classes </a> </li>
+                    <li> <a href = "#"> Encapsulation </a> </li>
+                    <li> <a href = "#"> Inheritance </a> </li>
+                    <li> <a href = "#"> Polymorphism </a> </li>
+                    <li> <a href = "#"> Abstract Classes </a> </li>
+                    <li> <a href = "#"> Interfaces </a> </li>
+
+                    </ul>
+
+                </nav>
 
                 <h5> Projects </h5>
 
-                <a href = "#">  </a>
+                <ul>
 
-        </div>
+                <li> <a href = "#">  </a> </li>
+
+                </ul>
+
+        </aside>
 
         <div class = "main-content">
 
