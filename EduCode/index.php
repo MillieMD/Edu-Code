@@ -13,7 +13,7 @@
     <a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
     <header>
-        <nav>
+        <nav id = "site-nav">
             <ul>
                 <li> <a href = "index.php">Home</a> </li>
                 <li> <a href = "pages/java.php">Java</a> </li>
@@ -21,7 +21,7 @@
             </ul>
         </nav>  
 
-        <div class = 'header-right'>
+        <nav id = "account-actions">
             <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
@@ -50,7 +50,7 @@
                 ");
             }
             ?>
-        </div>
+        </nav>
     </header>
 
     <main id = "main">

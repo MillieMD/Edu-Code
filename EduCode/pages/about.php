@@ -12,15 +12,15 @@
 <a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
     
 <header>
-        <nav>
+        <nav id = "site-nav">
             <ul>
-                <li> <a href = "../index.php">Home</a> </li>
-                <li> <a href = "java.php">Java</a> </li>
-                <li> <a href = "python.php">Python</a> </li>
+                <li> <a href = "index.php">Home</a> </li>
+                <li> <a href = "pages/java.php">Java</a> </li>
+                <li> <a href = "pages/python.php">Python</a> </li>
             </ul>
         </nav>  
 
-        <div class = 'header-right'>
+        <nav id = "account-actions">
             <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
@@ -42,14 +42,14 @@
                 echo(" 
 
                 <ul>
-                    <li> <a href = 'login.html'>Log in</a> </li>
-                    <li> <a href = 'register.html'>Register</a> </li>
+                    <li> <a href = 'pages/login.html'>Log in</a> </li>
+                    <li> <a href = 'pages/register.html'>Register</a> </li>
                 </ul>
 
                 ");
             }
             ?>
-        </div>
+        </nav>
     </header>
 
     <main id = "main">

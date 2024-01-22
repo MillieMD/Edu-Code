@@ -20,11 +20,11 @@
             </ul>
         </nav> 
         
-        <div class = "header-right">
+        <nav>
             <ul>
                 <li> Log Out </li>
             </ul>
-        </div>
+        </nav>
         
     </header>
 
