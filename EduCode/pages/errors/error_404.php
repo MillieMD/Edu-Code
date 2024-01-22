@@ -21,7 +21,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -52,12 +52,15 @@
         </div>
     </header>
 
+    <main id = "main">
+
     <h3> Error: 404 - Page Not Found </h3>
     <h2> You have encountered an error loading this page, please try again. If problems continue, 
         please try again later or contact the site manager </h2>
 
     <button class = "button-blue"> Home page </button>
 
+    </main>
     
     <footer>
         <nav>

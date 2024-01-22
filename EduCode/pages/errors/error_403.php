@@ -21,7 +21,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -52,11 +52,14 @@
         </div>
     </header>
 
+    <main id = "main">
+
     <h3> Error: 403 - Permission Denied </h3>
     <h2> Sorry, you do not have access to this resource </h2>
 
     <button class = "button-blue"> Home page </button>
 
+    </main>
     
     <footer>
         <nav>

@@ -28,7 +28,10 @@
         
     </header>
 
-    
+    <main id = "main">
+
+    </main>
+
     <footer>
         <nav>
             <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>

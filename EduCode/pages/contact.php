@@ -21,7 +21,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -51,6 +51,8 @@
             ?>
         </div>
     </header>
+
+    <main id = "main">
     
     <div class = 'title-section' style = 'background-color: #0099ff;'>
         <div class = 'title'>Contact</div>
@@ -59,6 +61,8 @@
     <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
         <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#0099ff"></path>
     </svg>
+    
+    </main>
 
     <footer>
         <nav>

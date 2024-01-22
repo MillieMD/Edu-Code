@@ -21,7 +21,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -51,6 +51,8 @@
             ?>
         </div>
     </header>
+
+    <main id = "main">
     
     <div class = 'title-section'>
         <div class = 'title'>Python</div>
@@ -73,6 +75,8 @@
         </div>
     
     </div>
+
+    </main>
 
     <footer>
         <nav>

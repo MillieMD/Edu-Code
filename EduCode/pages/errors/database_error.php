@@ -21,7 +21,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -52,6 +52,8 @@
         </div>
     </header>
 
+    <main id = "main">
+
     <h3> Sorry, we have encountered a problem with our database. 
         Ensure you have typed everything correctly and try again, 
         however if problems persist contact the site manager </h3>
@@ -66,6 +68,7 @@
 
     <button class = "button-blue"> Home page </button>
 
+    </main>
     
     <footer>
         <nav>

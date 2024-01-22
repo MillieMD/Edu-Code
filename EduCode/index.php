@@ -22,7 +22,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -55,38 +55,38 @@
 
     <main id = "main">
     
-    <div class = 'title-section' style = 'max-width: 100%;'>
-        <h1 style = "padding: 8vw;">{edu:Code}</h1>
-        <button class = "button-dark"> Start Learning </button>
-    </div>
-
-    <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#007BFF"></path>
-    </svg>
-
-        <div class = "info-section">
-        
-            <div> 
-                <h2> Why edu:Code? </h2>
-                Practical application of programming skills is the most effective way to learn to code, 
-                so we give you the chance to put lessons to use in fill-in-the-blank activies. 
-                You are provided clear error messages, to teach you to debug and correct your own code. 
-                <br> <br>
-                We carefully tailor the learning experience to you, 
-                through quizzes which the you can take at anytime to highlight your strengths and weaknesses,
-                and a log of the activities you've completed to identify next steps.
-            </div>
-
-            <img src = "images/logolight.png">
-
+        <div class = 'title-section' style = 'max-width: 100%;'>
+            <h1 style = "padding: 8vw;">{edu:Code}</h1>
+            <button class = "button-dark"> Start Learning </button>
         </div>
 
+        <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
+            <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#007BFF"></path>
+        </svg>
 
-    <div class = "image-span" style = "background-color: #000000;">
+            <div class = "info-section">
+            
+                <div> 
+                    <h2> Why edu:Code? </h2>
+                    Practical application of programming skills is the most effective way to learn to code, 
+                    so we give you the chance to put lessons to use in fill-in-the-blank activies. 
+                    You are provided clear error messages, to teach you to debug and correct your own code. 
+                    <br> <br>
+                    We carefully tailor the learning experience to you, 
+                    through quizzes which the you can take at anytime to highlight your strengths and weaknesses,
+                    and a log of the activities you've completed to identify next steps.
+                </div>
 
-        <img src = images/landingpage.png>
+                <img src = "images/logolight.png">
 
-    </div>
+            </div>
+
+
+        <div class = "image-span" style = "background-color: #000000;">
+
+            <img src = images/landingpage.png>
+
+        </div>
 
     </main>
 

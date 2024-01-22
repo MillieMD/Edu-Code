@@ -24,7 +24,7 @@
         </nav>  
 
         <div class = 'header-right'>
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -55,26 +55,30 @@
         </div>
     </header>
 
-    <!-- Title : Quiz -->
-    <!-- Java button Python toggle -->
+    <main id = "main">
 
-    <form id = "quiz-selector"> 
+        <!-- Title : Quiz -->
+        <!-- Java button Python toggle -->
 
-        <h3> Which language are you learning? </h3>
+        <form id = "quiz-selector"> 
 
-            <span>
-                <label for = "language">Java</label>
-                <input type = "radio" name = "language" value = "J">
+            <h3> Which language are you learning? </h3>
 
-                <input type = "radio" name = "language" value = "P">
-                <label for = "language">Python</label>
-            </span>
+                <span>
+                    <label for = "language">Java</label>
+                    <input type = "radio" name = "language" value = "J">
 
-            <p id = "warning"></p>
+                    <input type = "radio" name = "language" value = "P">
+                    <label for = "language">Python</label>
+                </span>
 
-        <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
+                <p id = "warning"></p>
 
-    </form>
+            <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
+
+        </form>
+
+    </main>
 
     <footer>
         <nav>
