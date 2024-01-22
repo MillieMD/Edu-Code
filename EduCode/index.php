@@ -10,22 +10,19 @@
 
 <body>
 
-    <div class = 'header'>
+    <a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
+    <header>
+        <nav id = "site-nav">
+            <ul>
+                <li> <a href = "index.php">Home</a> </li>
+                <li> <a href = "pages/java.php">Java</a> </li>
+                <li> <a href = "pages/python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-            <a href = "index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "pages/java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "pages/python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
-
-        <div class = 'header-right'>
-
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
+        <nav id = "account-actions">
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
@@ -36,71 +33,75 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'pages/login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'pages/register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'pages/login.html'>Log in</a> </li>
+                    <li> <a href = 'pages/register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
-        </div>
-    </div>
+        </nav>
+    </header>
+
+    <main id = "main">
     
-    <div class = 'title-section' style = 'max-width: 100%;'>
-        <h1 style = "padding: 8vw;">{edu:Code}</h1>
-        <button class = "button-dark"> <h5> Start Learning </h5> </button>
-    </div>
+        <div class = 'title-section' style = 'max-width: 100%;'>
+            <h1 style = "padding: 8vw;">{edu:Code}</h1>
+            <button class = "button-dark"> Start Learning </button>
+        </div>
 
-    <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
-        <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#007BFF"></path>
-    </svg>
+        <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
+            <path id="wavepath" d="M0,0 L110,0C35,150 35,0 0,100z" fill="#007BFF"></path>
+        </svg>
 
-        <div class = "info-section">
-        
-            <div> 
-                <h2> Why edu:Code? </h2>
-                Practical application of programming skills is the most effective way to learn to code, 
-                so we give you the chance to put lessons to use in fill-in-the-blank activies. 
-                You are provided clear error messages, to teach you to debug and correct your own code. 
-                <br> <br>
-                We carefully tailor the learning experience to you, 
-                through quizzes which the you can take at anytime to highlight your strengths and weaknesses,
-                and a log of the activities you've completed to identify next steps.
+            <div class = "info-section">
+            
+                <div> 
+                    <h2> Why edu:Code? </h2>
+                    Practical application of programming skills is the most effective way to learn to code, 
+                    so we give you the chance to put lessons to use in fill-in-the-blank activies. 
+                    You are provided clear error messages, to teach you to debug and correct your own code. 
+                    <br> <br>
+                    We carefully tailor the learning experience to you, 
+                    through quizzes which the you can take at anytime to highlight your strengths and weaknesses,
+                    and a log of the activities you've completed to identify next steps.
+                </div>
+
+                <img src = "images/logolight.png">
+
             </div>
 
-            <img src = "images/logolight.png">
+
+        <div class = "image-span" style = "background-color: #000000;">
+
+            <img src = images/landingpage.png>
 
         </div>
 
+    </main>
 
-    <div class = "image-span" style = "background-color: #000000;">
-
-        <img src = images/landingpage.png>
-
-    </div>
-
-    <div class = "footer">
-
-        <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "pages/projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "pages/contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "pages/about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "pages/projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "pages/contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "pages/about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
 </body>   
 </html>

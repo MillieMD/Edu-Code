@@ -12,22 +12,19 @@
 
 <body>
 
-    <div class = 'header'>
+<a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
+<header>
+<nav id = "site-nav">
+            <ul>
+                <li> <a href = "index.php">Home</a> </li>
+                <li> <a href = "pages/java.php">Java</a> </li>
+                <li> <a href = "pages/python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
-
-        <div class = 'header-right'>
-
+        <nav id = "account-actions">
             <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
             <?php
             session_start();
 
@@ -38,59 +35,63 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'pages/login.html'>Log in</a> </li>
+                    <li> <a href = 'pages/register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <!-- Title : Quiz -->
-    <!-- Java button Python toggle -->
+    <main id = "main">
 
-    <form id = "quiz-selector"> 
+        <!-- Title : Quiz -->
+        <!-- Java button Python toggle -->
 
-        <h3> Which language are you learning? </h3>
+        <form id = "quiz-selector"> 
 
-            <span>
-                <label for = "language">Java</label>
-                <input type = "radio" name = "language" value = "J">
+            <h3> Which language are you learning? </h3>
 
-                <input type = "radio" name = "language" value = "P">
-                <label for = "language">Python</label>
-            </span>
+                <span>
+                    <label for = "language">Java</label>
+                    <input type = "radio" name = "language" value = "J">
 
-            <p id = "warning"></p>
+                    <input type = "radio" name = "language" value = "P">
+                    <label for = "language">Python</label>
+                </span>
 
-        <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
+                <p id = "warning"></p>
 
-    </form>
+            <button type = "button" class = "button-dark" onclick = "quizSelect();"> Take Quiz!</button>
 
-    <div class = "footer" id = "footer">
+        </form>
 
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "about.php"><button class = "button-light"> About Us </button></a>
+    </main>
+
+    <footer>
+        <nav>
+            <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
     <script src = "../js/quiz.js"></script>
 

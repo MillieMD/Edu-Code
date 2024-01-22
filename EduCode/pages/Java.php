@@ -10,95 +10,109 @@
 
 <body>
 
-    <div class = 'header'>
+<a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
+<header>
+<nav id = "site-nav">
+            <ul>
+                <li> <a href = "index.php">Home</a> </li>
+                <li> <a href = "pages/java.php">Java</a> </li>
+                <li> <a href = "pages/python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
-
-        <div class = 'header-right'>
-
-
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
+        <nav id = "account-actions">
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
-            if($_SESSION["user_id"] === null){
+            if(!isset($_SESSION["user_id"])){
                 $_SESSION["user_id"] = 0;
             }
 
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'pages/login.html'>Log in</a> </li>
+                    <li> <a href = 'pages/register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div style = >
+    <main id = "main">
 
-        <div class = "side-bar"> 
+        <aside> 
 
                 <h5 > Tutorials </h5>
 
+                <nav>
 
-                <h6> The Basics </h6>
+                    <h6> The Basics </h6>
 
-                <a href = "#"> Getting started </a>
-                <a href = "#"> Operators </a>
-                <a href = "#"> Variables </a>
-                <a href = "#"> Data Types </a>
-                <a href = "#"> Strings </a>
-                <a href = "#"> If-Else </a>
-                <a href = "#"> While loops </a>
-                <a href = "#"> For Loops </a>
-                <a href = "#"> Switch Statements </a>
-                <a href = "#"> Arrays </a>
+                    <ul>
 
-                <h6> Methods </h6>
+                    <li> <a href = "#"> Getting started </a> </li>
+                    <li> <a href = "#"> Operators </a> </li>
+                    <li> <a href = "#"> Variables </a> </li>
+                    <li> <a href = "#"> Data Types </a> </li>
+                    <li> <a href = "#"> Strings </a> </li>
+                    <li> <a href = "#"> If-Else </a> </li>
+                    <li> <a href = "#"> While loops </a> </li>
+                    <li> <a href = "#"> For Loops </a> </li>
+                    <li> <a href = "#"> Switch Statements </a> </li>
+                    <li> <a href = "#"> Arrays </a> </li>
 
-                <a href = "#"> Methods </a>
-                <a href = "#"> Method Overriding </a>
-                <a href = "#"> Access Modifiers </a>
-                <a href = "#"> Testing </a>
+                    </ul>
 
-                <h6> Object Oriented Programming </h6>
+                    <h6> Methods </h6>
 
-                <a href = "#"> Classes </a>
-                <a href = "#"> Encapsulation </a>
-                <a href = "#"> Inheritance </a>
-                <a href = "#"> Polymorphism </a>
-                <a href = "#"> Abstract Classes </a>
-                <a href = "#"> Interfaces </a>
+                    <ul>
+
+                    <li> <a href = "#"> Methods </a> </li>
+                    <li> <a href = "#"> Method Overriding </a> </li>
+                    <li> <a href = "#"> Access Modifiers </a> </li>
+                    <li> <a href = "#"> Testing </a> </li>
+
+                    </ul>
+
+                    <h6> Object Oriented Programming </h6>
+
+                    <ul>
+
+                    <li> <a href = "#"> Classes </a> </li>
+                    <li> <a href = "#"> Encapsulation </a> </li>
+                    <li> <a href = "#"> Inheritance </a> </li>
+                    <li> <a href = "#"> Polymorphism </a> </li>
+                    <li> <a href = "#"> Abstract Classes </a> </li>
+                    <li> <a href = "#"> Interfaces </a> </li>
+
+                    </ul>
+
+                </nav>
 
                 <h5> Projects </h5>
 
-                <a href = "#">  </a>
+                <ul>
 
-        </div>
+                <li> <a href = "#">  </a> </li>
+
+                </ul>
+
+        </aside>
 
         <div class = "main-content">
 
@@ -115,19 +129,20 @@
 
         </div>
 
-    </div>
+    </main>
 
-    <div class = "footer">
-
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
 </body>   
 </html>
