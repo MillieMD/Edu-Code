@@ -1,11 +1,11 @@
-## Edu-Code
+## edu:Code
 
 Refactor of Arc-Code using original name edu:Code
 
 Website designed to teach primary and GCSE students Python and Java programming.
 
 ### Aims: 
-Tidy up HTML and CSS by clearly renaming classes and removing unecessary bloat, make php more streamline and secure
+Tidy up HTML and CSS by clearly renaming classes and removing unecessary bloat. Make php more streamline and secure. Improve accessibility. Have fun building a website
 
 ### Features:
   - [ ] Tutorial information per topic, per language
