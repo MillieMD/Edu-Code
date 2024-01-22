@@ -79,12 +79,29 @@
 
                 <img src = "images/logolight.png">
 
+        </div>
+
+
+        <div class = "hor-flex" style = "background-color: #000000; justify-content: center; padding: 1vw;" role="">
+
+            <div style = "padding: 1vw; text-align: center"">
+                <img src = "images/register.svg" >
+                <p style = "color: #F6F0ED"> 1. Register with edu:Code </p>    
             </div>
 
+            <img src = "images/arrow.svg" style = "width: 2%;">
 
-        <div class = "image-span" style = "background-color: #000000;">
+            <div style = "padding: 1vw; text-align: center"">
+                <img src = "images/taketest.svg">
+                <p style = "color: #F6F0ED"> 2. Take a short test </p>    
+            </div>
 
-            <img src = images/landingpage.png>
+            <img src = "images/arrow.svg" style = "width: 2%;">
+
+            <div style = "padding: 1vw; text-align: center">
+                <img src = "images/codingwizz.svg">
+                <p style = "color: #F6F0ED"> 3. Become a master at Python and Java </p>    
+            </div>
 
         </div>
 
