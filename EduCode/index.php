@@ -84,17 +84,18 @@
 
     </div>
 
-    <div class = "footer">
-
-        <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "pages/projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "pages/contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "pages/about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "pages/quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "pages/projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "pages/contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "pages/about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
 </body>   
 </html>
