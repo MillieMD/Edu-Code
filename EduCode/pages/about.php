@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+<a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
     
 <header>
         <nav>

@@ -10,6 +10,8 @@
 
 <body>
 
+    <a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
+
     <header>
         <nav>
             <ul>
@@ -50,10 +52,12 @@
             ?>
         </div>
     </header>
+
+    <main id = "main">
     
     <div class = 'title-section' style = 'max-width: 100%;'>
         <h1 style = "padding: 8vw;">{edu:Code}</h1>
-        <button class = "button-dark"> <h5> Start Learning </h5> </button>
+        <button class = "button-dark"> Start Learning </button>
     </div>
 
     <svg width="100%" height="200" viewBox="5 10 100 100" preserveAspectRatio="none">
@@ -83,6 +87,8 @@
         <img src = images/landingpage.png>
 
     </div>
+
+    </main>
 
     <footer>
         <nav>

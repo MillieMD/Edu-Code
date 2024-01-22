@@ -209,6 +209,26 @@ footer{
 
 }
 
+.skip-link{
+
+    z-index: 100; /* Always be on top */
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    background-color: var(--white);
+    color: var(--dark-blue);
+    
+    padding: 0.8vw 0.8vw;
+}
+
+.skip-link:focus{
+    transform: translateY(0%);
+}
+
 .side-bar{
 
     display: flex;
