@@ -10,22 +10,17 @@
 
 <body>
 
-    <div class = 'header'>
-
-        <div class = 'header-left'>
-
-            <a href = "index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "pages/java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "pages/python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
+    <header>
+        <nav>
+            <ul>
+                <li> <a href = "index.php">Home</a> </li>
+                <li> <a href = "pages/java.php">Java</a> </li>
+                <li> <a href = "pages/python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
         <div class = 'header-right'>
-
         <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
             <?php
             session_start();
 
@@ -36,26 +31,25 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'pages/login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'pages/register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'pages/login.html'>Log in</a> </li>
+                    <li> <a href = 'pages/register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
         </div>
-    </div>
+    </header>
     
     <div class = 'title-section' style = 'max-width: 100%;'>
         <h1 style = "padding: 8vw;">{edu:Code}</h1>

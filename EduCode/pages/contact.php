@@ -9,53 +9,46 @@
 
 <body>
 
-    <div class = 'header'>
-
-        <div class = 'header-left'>
-
-            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
+<header>
+        <nav>
+            <ul>
+                <li> <a href = "../index.php">Home</a> </li>
+                <li> <a href = "java.php">Java</a> </li>
+                <li> <a href = "python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
         <div class = 'header-right'>
-
-
         <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
             <?php
             session_start();
 
-            if($_SESSION["user_id"] === null){
+            if(!isset($_SESSION["user_id"])){
                 $_SESSION["user_id"] = 0;
             }
 
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'login.html'>Log in</a> </li>
+                    <li> <a href = 'register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
         </div>
-    </div>
+    </header>
     
     <div class = 'title-section' style = 'background-color: #0099ff;'>
         <div class = 'title'>Contact</div>
