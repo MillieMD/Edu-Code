@@ -87,7 +87,6 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
         title.insertAdjacentHTML("afterbegin", "<h5> " + (i+1) + "</h5>"); // Quiz number
         title.insertAdjacentHTML("beforeend", "<h6> " + currentQuestion["question"] + "</h6>") // Quiz question
 
-
         e.append(title);
 
         let answers = currentQuestion["answers"].sort((a, b) => 0.5 - Math.random()); // Shuffle array so correct answer != answers[0]
