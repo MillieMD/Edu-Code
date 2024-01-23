@@ -30,12 +30,8 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
     let response = await fetch("../js/quiz.json");
     response = await response.json();
 
-    console.log(response);
-
     // Shuffle questions, so they aren't the same ones on every quiz
     let questions = response[language].sort((a, b) => 0.5 - Math.random()); 
-    console.log(questions);
-    console.log(questions.length);
 
     // Create wrapper element for questions to reside in
     const quizWrapper = document.createElement("form");
@@ -47,7 +43,7 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
 
     // Put wraper on end, then put footer on the end (deletes + reapplies/moves old footer)
     document.body.append(quizWrapper);
-    document.body.append(document.getElementById("footer"));
+    document.body.append(document.getElementById("footer")); // Should only ever be one footer per page
 
     // Add questions to quiz wrapper
     for(i = 0; i < numOfQuestions && i < questions.length; i++){
@@ -62,6 +58,7 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
         e.id = "question-" + i; // Id for navigating between questions
         e.dataset.answer = currentQuestion["answers"][0];
         e.dataset.topic = currentQuestion["topic"];
+        e.dataset.answered = 0; // 0 for false: not answered, 1 for true: answered
 
         // Hide all but first questions
         if(i > 0){
@@ -127,4 +124,5 @@ async function generateQuiz(language, numOfQuestions = DEFAULT_QUANTITY){
     next.id = "next-button";
 
     quizWrapper.append(next);
+
 }
