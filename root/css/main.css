@@ -129,9 +129,7 @@ html{
 }
 
 body{
-    display:flex;
-    flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
 
     margin: 0;
@@ -143,7 +141,13 @@ body{
 
 /* Navigation */
 
-.header{
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header{
     display: flex;
     justify-content: space-between;
 
@@ -155,26 +159,45 @@ body{
     background-color: var(--light-blue);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
+/* 
+header ul{
 
-.header .header-left button, .header .header-right button{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} */
 
-    padding: 0.8vw;
+header ul li{
 
+    float: left;
+
+    background-color: var(--light-blue);
+    color: var(--white);
+
+    padding: 0.8vw 0.8vw;
+
+    font-size: 1.69rem;
 }
 
-.header .header-left button, .header .header-right a{
+header ul li:hover{
 
+    background-color: var(--white);
+    color: var(--dark-blue);
+
+    padding: 0.8vw 0.8vw;
+
+    font-size: 1.69rem;
+}
+
+header ul li a{
+
+    color: inherit;
     text-decoration: none;
 
+    padding: 0.8vw 0.8vw;
 }
 
-.header .header-left button, .header .header-right a:visited{
-
-    text-decoration: none;
-
-}
-
-.footer{
+footer{
 
     padding: 2vw;
 
@@ -183,12 +206,35 @@ body{
     background-color: var(--light-blue);
     color: var(--white);
 
-    height: 100%;
+    position: relative;
+    z-index: 10;
+    bottom: 0;
+
     width: 96%;
 
 }
 
-.side-bar{
+.skip-link{
+
+    z-index: 100; /* Always be on top */
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    background-color: var(--white);
+    color: var(--dark-blue);
+    
+    padding: 0.8vw 0.8vw;
+}
+
+.skip-link:focus{
+    transform: translateY(0%);
+}
+
+aside{
 
     display: flex;
     flex-direction: column;
@@ -204,11 +250,11 @@ body{
     color: var(--white);
 }
 
-.side-bar h5, .side-bar h6{
+aside h5, aside h6{
     background: var(--dark-blue);
 }
 
-.side-bar a{
+aside a{
     font-size: 1.3em;
 }
 

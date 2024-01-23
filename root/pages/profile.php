@@ -9,38 +9,41 @@
 
 <body>
 
-    <div class = 'header'>
+<a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
+<header>
+        <nav>
+            <ul>
+                <li> <a href = "../index.php">Home</a> </li>
+                <li> <a href = "java.php">Java</a> </li>
+                <li> <a href = "python.php">Python</a> </li>
+            </ul>
+        </nav> 
+        
+        <nav>
+            <ul>
+                <li> Log Out </li>
+            </ul>
+        </nav>
+        
+    </header>
 
-            <a href = "../index.php"><button class = "button-blue">Home</button></a>
+    <main id = "main">
 
-            <a href = "java.php"><button class = "button-blue">Java</button></a>
+    </main>
 
-            <a href = "python.php"><button class = "button-blue">Python</button></a>
-
-        </div>  
-
-        <div class = 'header-right'>
-
-        <button class = "button-blue"> Log Out </button>
-
-        </div>
-
-    </div>
-
-    
-    <div class = "footer">
-
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
 
 </body>

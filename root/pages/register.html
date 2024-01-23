@@ -11,19 +11,20 @@
 
 <body>
 
-    <div class = 'header'>
+    <a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
-            
-            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href = "../index.php">Home</a> </li>
+                <li> <a href = "java.php">Java</a> </li>
+                <li> <a href = "python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
+    </header>
 
-            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
-
-    </div>
+    <main id = "main">
 
     <form action = "../php/register.php" method = "POST" id = "register" enctype = "UTF-8">
 
@@ -44,18 +45,21 @@
 
     </form>
 
+    </main>
 
-    <div class = "footer">
 
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
 </body>
 </html>
