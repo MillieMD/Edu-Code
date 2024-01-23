@@ -80,8 +80,6 @@
             echo("</h4>");
     ?>
 
-    <div id = "progress-bar"></div>
-
     <div class = "hor-flex"> 
 
             <?php

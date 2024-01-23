@@ -17,9 +17,9 @@
 <header>
 <nav id = "site-nav">
             <ul>
-                <li> <a href = "index.php">Home</a> </li>
-                <li> <a href = "pages/java.php">Java</a> </li>
-                <li> <a href = "pages/python.php">Python</a> </li>
+                <li> <a href = "../index.php">Home</a> </li>
+                <li> <a href = "java.php">Java</a> </li>
+                <li> <a href = "python.php">Python</a> </li>
             </ul>
         </nav>  
 
@@ -45,8 +45,8 @@
                 echo(" 
 
                 <ul>
-                    <li> <a href = 'pages/login.html'>Log in</a> </li>
-                    <li> <a href = 'pages/register.html'>Register</a> </li>
+                    <li> <a href = 'login.html'>Log in</a> </li>
+                    <li> <a href = 'register.html'>Register</a> </li>
                 </ul>
 
                 ");
@@ -80,7 +80,7 @@
 
     </main>
 
-    <footer>
+    <footer id = "footer">
         <nav>
             <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
             <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
@@ -98,6 +98,7 @@
     <script type = "text/javascript"> 
 
         var currentQuestion = 0;
+        var answered = 0;
         var score = 0;
 
         function nextQuestion(){
@@ -112,10 +113,16 @@
             // TODO: check what happens to score when no radio button pressed
             for(var i = 0; i < options.length; i++){
                 if(options[i].checked){
+
+                    answered++;
+                    document.getElementById("progressbar").setAttribute("value", answered/DEFAULT_QUANTITY);
+
                     if(question.dataset.answer == options[i].value){
                         score++; // If answer in checked box is correct, increment score
                     }
-                }
+
+                    break;
+                } 
             }
 
             question.style.display = "none"; // Remove question after checking
