@@ -9,55 +9,46 @@
 
 <body>
 
-    <div class = 'header'>
+    <header>
+        <nav id = "site-nav">
+            <ul>
+                <li> <a href = "../../index.php">Home</a> </li>
+                <li> <a href = "../java.php">Java</a> </li>
+                <li> <a href = "../python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-        <div class = 'header-left'>
-
-            <a href = "../../index.php"><button class = "button-blue">Home</button></a>
-
-            <a href = "../java.php"><button class = "button-blue">Java</button></a>
-
-            <a href = "../python.php"><button class = "button-blue">Python</button></a>
-
-        </div>  
-
-
-        <div class = 'header-right'>
-
-
-        <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
+        <nav id = "account-actions">
+            <!-- If user logged in, link to profile, else give options to sign in or sign up -->
             <?php
             session_start();
 
-            if($_SESSION["user_id"] === null){
+            if(!isset($_SESSION["user_id"])){
                 $_SESSION["user_id"] = 0;
             }
 
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = '#'>
-                <button class = 'button-dark'>Profile</button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'pages/login.html'>
-                <button class = 'button-blue'>Log in</button>
-                </a>
-                <a href = 'pages/register.html'>
-                <button class = 'button-dark'>Register</button>
-                </a>
+
+                <ul>
+                    <li> <a href = '../login.html'>Log in</a> </li>
+                    <li> <a href = '../register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
-        </div>
-
-    </div>
+        </nav>
+    </header>
 
     <h3> Error: 500 - Internal Error </h3>
     <h2> Sorry, we are currently experiencing problems, please try again. If problems continue, 

@@ -10,22 +10,19 @@
 
 <body>
 
-    <div class = 'header'>
+<a class = "skip-link" href = "#main" tabindex = "0"> Skip to main content </a>
 
-        <div class = 'header-left'>
+<header>
+<nav id = "site-nav">
+            <ul>
+                <li> <a href = "../index.php">Home</a> </li>
+                <li> <a href = "java.php">Java</a> </li>
+                <li> <a href = "python.php">Python</a> </li>
+            </ul>
+        </nav>  
 
-            <a href = "../index.php"><button class = "button-blue"><h5>Home</h5></button></a>
-
-            <a href = "java.php"><button class = "button-blue"><h5>Java</h5></button></a>
-
-            <a href = "python.php"><button class = "button-blue"><h5>Python</h5></button></a>
-
-        </div>  
-
-        <div class = 'header-right'>
-
+        <nav id = "account-actions">
             <!-- If user logged in, link to profile, else give options to sign in or sign up -->
-
             <?php
             session_start();
 
@@ -36,26 +33,27 @@
             if($_SESSION["user_id"] > 0){
 
                 echo("
-                <a href = 'profile.php'>
-                <button class = 'button-dark'><h5>Profile</h5></button>
-                </a>
+                <ul>
+                    <li> <a href = '#'>Profile</a> </li>
+                </ul>
                 ");
 
             } else{
 
                 echo(" 
-                <a href = 'login.html'>
-                <button class = 'button-blue'><h5>Log in</h5></button>
-                </a>
-                <a href = 'register.html'>
-                <button class = 'button-dark'><h5>Register</h5></button>
-                </a>
+
+                <ul>
+                    <li> <a href = 'login.html'>Log in</a> </li>
+                    <li> <a href = 'register.html'>Register</a> </li>
+                </ul>
 
                 ");
             }
             ?>
-        </div>
-    </div>
+        </nav>
+    </header>
+
+    <main id = "main">
 
     <?php
 
@@ -130,17 +128,20 @@
 
     </div>
 
-    <div class = "footer" id = "footer">
+    </main>
 
-        <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
-        <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
-        <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
-        <a href = "about.php"><button class = "button-light"> About Us </button></a>
+    <footer>
+        <nav>
+            <a href = "quizselect.php"><button class = "button-light"> Take a Quiz </button></a>
+            <a href = "projectselect.php"><button class = "button-light"> Project Tutorials </button></a>
+            <a href = "contact.php"><button class = "button-light"> Contact Us </button></a>
+            <a href = "about.php"><button class = "button-light"> About Us </button></a>
+        </nav>
 
         <p> edu:Code is here to help you learn to code in Python and Java, regardless of your experience. 
-           <br> Get started today! </p>
+        <br> Get started today! </p>
 
-    </div>
+    </footer>
 
     <script src = "../js/quiz.js"> </script>
 
